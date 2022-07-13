@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mock 1</title>
+    <style type="text/css">
+        body {
+            width: 660px;
+            height: 580px;
+            margin: 20px 20px;
+            justify-content: center;
+            border: 3px solid #393131;
+        }
+
+        div {
+            display: inline-table;
+
+        }
+        .header_body {
+            width: 100%;
+            border-bottom: 3px solid #393131;
+            font-weight: bold;
+            text-indent: 5px;
+        }
+        .container {
+            margin: 5px;
+            width: 100%;
+        }
+        .header_pane {
+            background: green;
+            width: 642px;
+        }
+        .left-pane, .right-pane, .header_pane, .central-pane {
+            border: 3px solid #393131;
+            height: 100px;
+        }
+        .left-pane, .right-pane, .central-pane {
+            height: 200px;
+            width: 200px;
+        }
+        .left-pane {
+            background:  #E9C633;
+            margin-right: 15px;
+        }        
+        .central-pane {
+            background: #FD1E41;
+            margin-right: 15px;
+        }
+        .right-pane {
+            background: #2436F5;
+        }
+        #image_div_1, #image_div_2, #image_div_3 {
+            background-image: url("images/CSS_challenge_5.png");
+            background-size:100% 100%;
+            border: none;
+            height: 206px;
+            width: 206px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header_body">Mock 3</div>
+        <div class="container">
+            <div class="header_pane"></div>
+        </div>
+        <div class="container">
+            <div class="left-pane" id="image_div_1"></div>
+            <div class="central-pane" id="image_div_2"></div>
+            <div class="right-pane" id="image_div_3"></div>
+        </div>
+            <div class="container">
+            <div class="left-pane"></div>
+            <div class="central-pane"></div>
+            <div class="right-pane"></div>
+    </div>
+</body>
+</html>

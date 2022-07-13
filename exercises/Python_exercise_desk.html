@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<!-- sintax lightning -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	
+	
+</head>
+<body>
+	<div class="container-fluid m-3">
+	<h4>Task:</h4>
+<div class="text-body col-8">Create a deck of cards class. Internally, the deck of cards should use another class, a card class. Your requirements are:
+The Deck class should have a deal method to deal a single card from the deck After a card is dealt, it is removed from the deck. There should be a shuffle method which makes sure the deck of cards has all 52 cards and then rearranges them randomly. The Card class should have a suit (Hearts, Diamonds, Clubs, Spades) and a value (A,2,3,4,5,6,7,8,9,10,J,Q,K)</div>
+	<pre>
+		<code>
+    class Card:
+    def __init__(self, value, suit):
+        suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+        values_str = ['A','J','Q','K']
+        values_int = [2,3,4,5,6,7,8,9,10]
+        if suit in suits and (value in values_str or value in values_int):
+            self.name = str(value) + " " + suit
+        else:
+            print("That card does't exist")
+    def show(self):
+        return self.name
+		</code>
+	</pre>
+	<pre>
+		<code>
+class Desk():
+def __init__(self):
+	cards = []
+	for suit in ['Hearts', 'Diamonds', 'Clubs', 'Spades']:
+		for value in ['A',2,3,4,5,6,7,8,9,10,'J','Q','K']:
+			cards.append(Card(value, suit))
+	self.cards = cards
+
+def show_all(self):
+	cards_shows = []
+	for card in self.cards:
+		cards_shows.append(card.show())
+	return cards_shows
+
+def deal_card(self):
+	print('Card ' + self.cards[0].show() + " is dealt")
+	self.cards.pop(0)
+
+def shuffle(self):
+	from random import shuffle
+	if len(self.cards) == 52:
+		shuffle(self.cards)
+	else:
+		print('The deck is not full, shuffling canceled')
+		</code>
+	</pre>
+
+	<pre>
+		<code>
+card_1 = Card('A', 'Hearts')
+card_1.show()
+		</code>
+	</pre>
+	<h6>Out:</h6>
+	<div>A Hearts</div>
+	<pre>
+		<code>
+desk = Desk()
+desk.shuffle()
+
+desk.deal_card()
+desk.deal_card()
+desk.deal_card()
+
+desk.show_all()
+		</code>
+	</pre>
+		<h6>Out:</h6>
+	<div class="text-body">
+		<span style="white-space: pre-line">
+Card 2 Spades is dealt
+Card 4 Diamonds is dealt
+Card K Spades is dealt
+['4 Clubs',
+ 'Q Clubs',
+ '7 Clubs',
+ 'K Diamonds',
+ '4 Hearts',
+ '2 Diamonds',
+ '7 Spades',
+ '9 Diamonds',
+ '5 Hearts',
+ 'A Diamonds',
+ '10 Hearts',
+ '5 Spades',
+ '8 Spades',
+ '4 Spades',
+ '3 Clubs',
+ '5 Clubs',
+ 'A Clubs',
+ '8 Clubs',
+ '10 Clubs',
+ '10 Diamonds',
+ 'Q Spades',
+ 'A Spades',
+ '2 Clubs',
+ '5 Diamonds',
+ '8 Diamonds',
+ '3 Hearts',
+ '9 Clubs',
+ '2 Hearts',
+ '7 Hearts',
+ '10 Spades',
+ '3 Spades',
+ '6 Spades',
+ 'J Spades',
+ 'J Diamonds',
+ '3 Diamonds',
+ 'J Clubs',
+ 'J Hearts',
+ '7 Diamonds',
+ 'K Clubs',
+ '6 Diamonds',
+ '9 Hearts',
+ 'A Hearts',
+ '6 Clubs',
+ 'Q Diamonds',
+ '8 Hearts',
+ 'K Hearts',
+ '6 Hearts',
+ '9 Spades',
+ 'Q Hearts']
+		</span>
+		</div>
+	</div>
+</body>
+</html>

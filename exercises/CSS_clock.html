@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        body {
+            width: 320px;
+            height: 320px;
+            
+			border: 3px solid #393131;
+			border-radius: 50%;
+			
+			position: relative;
+		}
+        .dot {
+            width: 20px;
+			height: 20px;
+			
+			background: #FF0000;
+			
+			border: 2px solid #FF0000;
+			border-radius: 50%;
+			
+			position: absolute;
+			left:50%;
+   			bottom: 50%;
+			margin-bottom: -12px;
+			margin-left: -12px;
+
+        }
+        .hour_hand {
+            width: 10px;
+            height: 100px;
+            
+			background: black;
+            
+			position: absolute;
+            left:50%;
+   			bottom: 50%;
+			margin-left: -5px;
+			
+            animation: rotate 86400s linear infinite;
+        }
+        .second_hand {
+            width: 3px;
+            height: 150px;
+			
+            background: red;
+			
+            position: absolute;
+            left:50%;
+   			bottom: 50%;
+			margin-left: -1.5px;
+			
+            animation: rotate 60s linear infinite;
+        }
+        .minute_hand {
+            width: 5px;
+            height: 130px;
+            background: grey;
+			
+            position: absolute;
+            left:50%;
+   			bottom: 50%;
+			margin-left: -2.5px;
+			
+            animation: rotate 3600s linear infinite;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+                transform-origin: center bottom;
+            }
+            100% {
+                transform: rotate(360deg);
+                transform-origin: center bottom;
+            
+    </style>
+</head>
+<body>
+    <div class="hour_hand"></div>
+    <div class="second_hand"></div>
+    <div class="minute_hand"></div>
+	<div class="dot"></div>
+</body>
+</html>

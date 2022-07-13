@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+		 .col-4, .col-6, .col-12 { 
+      	display: inline-block; 
+      	height: 300px; 
+    	} 
+		.col-4 { 
+		  background-color: cadetblue;
+		  width: 33%;
+		} 
+		.col-6 { 
+		  background-color: aquamarine;
+		  width: 50%;
+		}
+		.col-12 { 
+		  background-color: darkgoldenrod;
+		  width: 100%;
+		}
+		@media (max-width: 960px) { 
+			.col-4 {
+				width: 50%;
+			}
+			.col-6 { 
+				width: 100%; 
+		    }
+		}
+		@media (max-width: 765px) { 
+			.col-4 {
+				width: 100%;
+			}
+		} 
+
+    </style>
+</head>
+<body>
+	<div>For this exercise you will be building a small grid system! Your task is to create the following classes:</div>
+	<ul>
+		<li>.col-4 - consumes 33% of the width when the screen size is greater than 960 pixels, 50% of the width when the screen size is greater than 765 pixels and 100% of the width when the screen size is less than 765 pixels.</li>
+
+		<li>.col-6 - consumes 50% of the width when the screen size is greater than 960 pixels and 100% of the width when the screen size is less than 960 pixels</li>
+
+		<li>.col-12 - consumes 100% of the width when the screen size at all sizes.</li>
+	</ul>
+	<div class="col-4"></div>
+	<div class="col-6"></div>
+	<div class="col-12"></div>
+</body>
+</html>
