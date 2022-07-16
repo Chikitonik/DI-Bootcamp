@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+div {
+  background-color:rgb(8, 174, 240);
+  margin:auto;
+  padding:8px;
+  font-family: sans-serif;
+  width:800px;
+}
+ul {
+  text-align: center;
+  list-style-type: none;
+}
+li::first-letter {
+  font-size: 25px;
+  font-weight: bold;
+}

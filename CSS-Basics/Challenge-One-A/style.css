@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+body {
+  background-color: burlywood;
+  margin:auto;
+  font-family: sans-serif;
+  width:680px; height:800px;
+}
+
+div {
+  background-color: lightyellow;
+  border-style: dashed;
+  padding:8px;
+}
+
+ul {
+  text-align: center;
+  list-style-type: none;
+  font-style: italic;
+}
+li::first-letter {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+p {
+  text-align:justify;
+  padding:10px;
+}
+
+.copyright {
+  text-align: center;
+}
+
+h1 {
+  font-style: italic;
+  font-family: Impact, Charcoal, sans-serif;
+  text-align: center;	
+  border-bottom: dashed;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
