@@ -1,0 +1,27 @@
+#nav {
+    background-color: rgb(131, 174, 255);
+    float: left;
+    padding: 10px;
+    width: 150px;
+    height: 420px;
+}
+#content {
+    background-color: rgb(84, 110, 180);
+    float: left;
+    padding: 10px;
+    height: 420px;
+    width: 480px;
+    text-align: center;
+}
+#content ul {
+    list-style-type: none;
+}	
+.copyright {
+    background-color: rgb(42, 36, 80);
+    float: left;
+}
+body {
+    background-color: rgb(42, 36, 80);
+    display: flex;
+    justify-content: center;
+}
