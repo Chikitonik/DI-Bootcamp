@@ -1,8 +1,12 @@
+/* font import */
+@import url(//fonts.googleapis.com/css?family=Gafata);
+
 body {
-    display:flex;
-    flex-direction:column;
+    /* min-width: fit-content; */
+    font-family: 'Gafata', sans-serif;
 }
 
+/* #region canvas */
 canvas {
     width: 100%;
     height: 100%;
@@ -28,15 +32,182 @@ canvas {
     background-attachment: fixed
 }
 
-#projector {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
+.highlight {
+    color: #5afaed;
 }
 
-.main {
-    width: 100%;
-    height: 100%;
+.height-fix {
+    /* height: calc(100vh + 53px); */
+    height:100vh;
+} 
+
+/* button-main-canvas */
+.button-main-canvas {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 15px;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #fff;
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, .5);
+    outline-offset: 0px;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
 }
+
+/* button-main-canvas arrow */
+.arrow {
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+.arrow-left,
+.arrow-right {
+    background: #ffffff;
+    height: 5px;
+    position: absolute;
+    width: 17px;
+}
+
+.arrow-left {
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+.arrow-right {
+    transform: rotate(-45deg);
+    transform-origin: top right;
+}
+
+/* button-main-canvas glow effect */
+.button-main-canvas:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+}
+
+/* button-main-canvas arrow effect */
+.arrow-left::after,
+.arrow-right::after {
+    background: #5afaed;
+    ;
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.20s;
+}
+
+.arrow-left::after {
+    left: 0;
+    right: 100%;
+    transition-delay: 0.20s;
+}
+
+.arrow-right::after {
+    left: 0;
+    right: 100%;
+    transition-delay: 0;
+}
+
+.button-main-canvas:hover .arrow-left::after {
+    right: 0;
+    transition-delay: 0;
+}
+
+.button-main-canvas:hover .arrow-right::after {
+    right: 0;
+    transition-delay: 0.20s;
+}
+/* #endregion canvas */
+
+/* #region navbar */
+.navbar {
+    z-index: 99999;
+    position: fixed !important;
+    background-color: black;
+}
+
+.navbar-toggler {
+    color: #5afaed;
+    background-color: #5afaed;
+    
+    z-index: 99999;
+    border: 1px solid;
+    border-color: #5afaed;
+}
+
+.active {
+    color: #5afaed;
+    border: 1px solid;
+    border-color: #5afaed;
+}
+
+/* navbar appearing */
+.navbar {
+    animation: fadeIn 10s;
+    -webkit-animation: fadeIn 10s;
+    -moz-animation: fadeIn 10s;
+    -o-animation: fadeIn 10s;
+    -ms-animation: fadeIn 10s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/* #endregion navbar */
