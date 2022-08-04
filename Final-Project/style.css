@@ -6,6 +6,10 @@ body {
     font-family: 'Gafata', sans-serif;
 }
 
+.text-shadow {
+    text-shadow: 1px 1px 2px black;
+}
+
 /* #region canvas */
 canvas {
     width: 100%;
@@ -38,8 +42,8 @@ canvas {
 
 .height-fix {
     /* height: calc(100vh + 53px); */
-    height:100vh;
-} 
+    height: 100vh;
+}
 
 /* button-main-canvas */
 .button-main-canvas {
@@ -128,8 +132,8 @@ canvas {
     right: 0;
     transition-delay: 0.20s;
 }
-/* #endregion canvas */
 
+/* #endregion canvas */
 /* #region navbar */
 .navbar {
     z-index: 99999;
@@ -140,7 +144,7 @@ canvas {
 .navbar-toggler {
     color: #5afaed;
     background-color: #5afaed;
-    
+
     z-index: 99999;
     border: 1px solid;
     border-color: #5afaed;
@@ -210,4 +214,94 @@ canvas {
         opacity: 1;
     }
 }
+
 /* #endregion navbar */
+/* #region slide */
+.animated.slide-from-right {
+    position: relative;
+    animation: showRight 1s;
+}
+
+@keyframes showRight {
+    from {
+        right: -100%;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+.animated.slide-from-left {
+    position: relative;
+    animation: showLeft 1s;
+}
+
+@keyframes showLeft {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* #endregion slide */
+
+.avatar {
+    width: 200px;
+    height: 200px
+}
+
+/* #region flip card */
+.flip-card-text {
+    width: 300px;
+    height: 50px;
+}
+
+.flip-card {
+    width: 80px;
+    height: 80px;
+}
+
+.flip-card-image {
+    -webkit-filter: drop-shadow(2px 2px 2px #222);
+    filter: drop-shadow(2px 2px 2px #222);
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+
+.flip-card-back {
+    /* background-color: transparent; */
+    transform: rotateY(180deg);
+}
+
+.flip-card-inner.animated {
+    transform: rotateY(180deg);
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+}
+
+/* #endregion flip card */
