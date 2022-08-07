@@ -1,0 +1,13 @@
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
+}
+
+.line {
+    margin-left: -5px;
+}
+
+.branch {
+    margin-left: 25px;
+}

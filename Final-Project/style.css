@@ -150,7 +150,7 @@ canvas {
     border-color: #5afaed;
 }
 
-.active {
+.nav-link.active {
     color: #5afaed;
     border: 1px solid;
     border-color: #5afaed;
@@ -265,8 +265,8 @@ canvas {
 }
 
 .flip-card {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
 }
 
 .flip-card-image {
@@ -291,7 +291,7 @@ canvas {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    
+
 }
 
 .flip-card-back {
@@ -305,3 +305,69 @@ canvas {
 }
 
 /* #endregion flip card */
+
+/* #region tabs */
+
+.tabs {
+    overflow: hidden;
+    /* border: 1px solid #ccc; */
+    /* background-color: #f1f1f1; */
+}
+
+/* Style the buttons inside the tab */
+.tabs button {
+    background-color: inherit;
+    /* float: left; */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    /* font-size: 17px; */
+}
+
+/* Change background color of buttons on hover */
+.tabs button:hover {
+    /* background-color: #ddd; */
+    border-bottom: 1px solid #5afaed;
+}
+
+/* Create an active/current tablink class */
+.tabs button.active {
+    /* background-color: #ccc; */
+    border-bottom: 3px solid #5afaed;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    /* border: 1px solid #ccc; */
+    /* border-top: none; */
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+.tabcontent.animated {
+    position: relative;
+    animation: showBottom 1s;
+}
+
+@keyframes showBottom {
+    from {
+        transform: scale(0.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* #endregion tabs */
+
+#footer a {
+    text-decoration: none;
+    color:#428681;
+}
