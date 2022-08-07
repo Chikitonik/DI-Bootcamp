@@ -75,7 +75,7 @@
       </strong>
     </div>
     <div class="button-main-canvas" onclick="ButtonMainCanvasClick()">
-      View my work
+      About me
       <div class="arrow">
         <div class="arrow-left"></div>
         <div class="arrow-right"></div>
@@ -89,7 +89,7 @@
       About
     </div>
     <!-- #region tools -->
-    <div class="row ">
+    <div class="row ms-1">
       <div class="col-2">
         <div class="flip-card-text flip-appear hidden">
           <div class="flip-card-inner flip-appear">
@@ -260,7 +260,7 @@
   </section>
   <!-- #endregion ABOUT -->
   <!-- #region PORTFOLIO -->
-  <section id="portfolio" class="bg-white">
+  <section id="portfolio" class="pt-5 d-flex flex-column bg-white">
     <div class="h1 w-100 pt-3 mb-5 text-center slide-from-right text-shadow hidden">
       Portfolio
     </div>
@@ -309,48 +309,41 @@
   </section>
   <!-- #endregion PORTFOLIO -->
   <!-- #region CONTACT -->
-  <section id="contact" class="bg-light">
-    <div class="h1 w-100 pt-3 mb-5 text-center slide-from-right text-shadow hidden">
-      Contact
+  <section id="contact" class="bg-dark">
+    <div class="row bg-white">
+      <div class="h1 w-100 pt-3 mb-5 mt-5 text-center slide-from-right text-shadow hidden">
+        Contact
+      </div>
     </div>
-    <p>1111111111111</p>
-    <p>1111111111111</p>
-    <p>1111111111111</p>
-    <p>1111111111111</p>
-    <p>1111111111111</p>
-    <p>1111111111111</p>
-    <p>1111111111111</p>
-    <p>1111111111111</p>
-    <p>1111111111111</p>
-    <p>1111111111111</p>
-    <p>1111111111111</p>
-    <p>1111111111111</p>
-    <p>1111111111111</p>
-    <p>1111111111111</p>
+    <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="150" width="100%">
+      <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
+    </svg>
     <!-- get in touch using https://formspree.io -->
-    <form action="https://formspree.io/f/xqkjzjvz" method="POST">
-      <label>
-        Your email:
-        <input type="email" name="email">
-      </label>
-      <label>
-        Your message:
-        <textarea name="message"></textarea>
-      </label>
-      <!-- your other form fields go here -->
-      <button type="submit">Send</button>
-    </form>
-
-
-
-    <!--Section: Contact v.2-->
-    <!-- <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
-    <div class="container text-center">
-      <small>Copyright &copy; Your Website</small>
+    <div class="col-12 mb-3 text-center">
+      <form class="contact-form shadow" action="https://formspree.io/f/xqkjzjvz" method="POST">
+        <div class="h4">Send me a letter</div>
+        <div class="row">
+          <div type="Email:"><input type="email" name="email" placeholder="Your email"></div>
+        </div>
+        <div class="row">
+          <div><textarea rows="3" name="message" placeholder="Your message"></textarea></div>
+        </div>
+        <button class="mail-btn" type="submit">send</button>
+      </form>
     </div>
-  </footer> -->
-    <footer id="footer" class="flex-shrink-0 py-4 bg-dark">
+
+  </footer> 
+    <footer id="footer" class="flex-shrink-0 py-5 bg-dark">
+      <div class="row justify-content-center">
+          <div class="button-footer-home" onclick="window.location.href='#home'">
+          <div class="arrow">
+            <div class="arrow-footer-left"></div>
+            <div class="arrow-footer-right"></div>
+          </div>
+        </div>
+      </div>
       <div class="container text-center">
+        <a class="h4">Find me here:</a>
         <a href="https://api.whatsapp.com/send?phone=+972504694780" target="_blank" title="whatsapp">
           <i class="fa-2x mx-3 fa-brands fa-whatsapp"></i>
         </a>
@@ -368,19 +361,21 @@
         </a>
       </div>
     </footer>
-    <!-- #endregion CONTACT -->
 
-    <!-- script canvas and main js always before end of body-->
-    <script type="text/javascript" src="scripts/canvas.js"></script>
-    <script type="text/javascript" src="scripts/index.js"></script>
-    <!-- script to collapse nav bar toggler after click -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript">
-      $('.js-scroll-trigger').click(function () {
-        $('.navbar-collapse').collapse('hide');
-      });
-    </script>
+  </section>
+  <!-- #endregion CONTACT -->
 
+  <!-- script canvas and main js always before end of body-->
+  <script type="text/javascript" src="scripts/canvas.js"></script>
+  <script type="text/javascript" src="scripts/index.js"></script>
+  <!-- script to collapse nav bar toggler after click -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $('.js-scroll-trigger').click(function () {
+      $('.navbar-collapse').collapse('hide');
+    });
+  </script>
+<link rel="stylesheet" href="style.css">
 </body>
 
 </html>

@@ -11,3 +11,16 @@ p {
 .branch {
     margin-left: 25px;
 }
+
+#sticky-header {
+    background-color:#fff3cd;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    /* width: 100% */
+  }
+  
+  .sticky + {
+    padding-top: 102px;
+  }
