@@ -148,6 +148,7 @@ canvas {
     border: 1px solid;
     border-color: #5afaed;
 }
+
 .nav-link:hover {
     color: #5afaed;
     text-shadow: 0 0 4px #5afaed;
@@ -355,10 +356,10 @@ canvas {
 
 .tabcontent.animated {
     position: relative;
-    animation: showBottom 1s;
+    animation: showScale 1s;
 }
 
-@keyframes showBottom {
+@keyframes showScale {
     from {
         transform: scale(0.2);
     }
@@ -368,6 +369,83 @@ canvas {
     }
 }
 
+.gallery-card {
+    height: 300px;
+    width: 400px;
+    background-position: 100%;
+}
+.gallery-card:hover {
+    background-image: none !important;
+}
+
+
+.button-gallery-card {
+    display: block;
+    width: 100px;
+    height:30px;
+    cursor: pointer;
+    color: #333;
+    border: 1px solid #333;
+    visibility: hidden;
+    opacity: 0;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-align: center;
+    transition: all .35s;
+}
+.button-gallery-card p {
+position: relative;
+z-index: 2;
+}
+
+.button-gallery-card:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #5afaed;
+    transition: all .35s;
+  }
+
+.button-gallery-card:hover {
+    color: #fff;
+    text-shadow: #000;
+}
+
+.button-gallery-card:hover:after{
+    width: 100%;
+  }
+
+.gallery-card:hover>.row .button-gallery-card {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.card-header {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(0);
+    transition: all .3s ease-out;
+}
+.gallery-card:hover>.row .card-header {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(100%);
+    align-items: both;
+}
+
+.carouselExampleDark {
+    height: 450px;
+    /* width: 700px; */
+}
+.carousel-inner .carousel-item {
+    height: 450px;
+    /* width: 700px; */
+  }
+  
 /* #endregion tabs */
 
 
@@ -503,6 +581,10 @@ canvas {
     padding: 25px 50px 10px 15px;
     color: #428681;
     border: 1px solid;
+    /* outer border effect */
+    outline: 1px solid;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+
 }
 
 /* button-footer-home arrow */
@@ -540,6 +622,7 @@ canvas {
     box-shadow: inset 0 0 20px #428681, 0 0 20px #428681;
     outline-color: rgba(255, 255, 255, 0);
     outline-offset: 15px;
+
 }
 
 /* button-footer-home arrow effect */
