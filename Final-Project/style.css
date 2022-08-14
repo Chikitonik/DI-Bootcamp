@@ -343,18 +343,18 @@ canvas {
 }
 
 /* Style the tab content */
-.tabcontent {
+.gallery-card {
     display: none;
     padding: 6px 12px;
     /* border: 1px solid #ccc; */
     /* border-top: none; */
 }
 
-.tabcontent.active {
+.gallery-card.active {
     display: block;
 }
 
-.tabcontent.animated {
+.gallery-card.animated {
     position: relative;
     animation: showScale 1s;
 }

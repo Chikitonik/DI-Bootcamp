@@ -42,23 +42,28 @@ window.addEventListener('scroll', () => {
 
 // #region tabs
 function activateTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-    tabcontent[i].classList.remove('animated');
+  var i, allGalleryCards, tablinks, selectedGalleryCards;
+  
+  allGalleryCards = document.getElementsByClassName("gallery-card");
+
+  for (i = 0; i < allGalleryCards.length; i++) {
+    allGalleryCards[i].style.display = "none";
+    allGalleryCards[i].classList.remove('animated');
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(tabName).style.display = "block";
-  document.getElementById(tabName).classList.add('animated');
+  selectedGalleryCards = document.getElementsByClassName(tabName);
+  for (i = 0; i < selectedGalleryCards.length; i++) {
+    selectedGalleryCards[i].style.display = "block";
+    selectedGalleryCards[i].classList.add('animated');
+  }
   evt.currentTarget.className += " active";
 }
-
-
 // #endregion tabs
+
+// #region dynamic modal carousel
 function ButtonCardClick(clicked_id) {
   var image_caption = "";
   image_caption = image_caption.concat("img/projects/", clicked_id);
@@ -80,5 +85,5 @@ function ButtonCardClick(clicked_id) {
   catch (e) {
     console.log("check for errors in fields of card id:", clicked_id);
   }
-
 }
+// #endregion dynamic modal carousel

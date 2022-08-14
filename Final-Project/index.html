@@ -271,20 +271,22 @@
     </div>
     <div class="tabs row">
       <div class="col-12 text-center">
-        <button class="tablinks mx-4 active" onclick="activateTab(event, 'All')">All</button>
-        <button class="tablinks mx-4" onclick="activateTab(event, 'Full-stack')">Full-stack</button>
-        <button class="tablinks mx-4" onclick="activateTab(event, 'Data science')">Data science</button>
+        <button class="tablinks mx-4 active" onclick="activateTab(event, 'gallery-card')">All</button>
+        <button class="tablinks mx-4" onclick="activateTab(event, 'tablink-full-stack')">Full-stack</button>
+        <button class="tablinks mx-4" onclick="activateTab(event, 'tablink-data-science')">Data science</button>
       </div>
     </div>
     <!-- All works -->
-    <div id="All" class="row tabcontent active justify-content-center">
+    <!-- <div id="Data science" class="row tabcontent active justify-content-center"> -->
       <!-- work 1 card -->
-      <div class="row m-2 gallery-card" style="background-image: url('img/projects/house-prices-kaggle.png')">
+      <!-- d-flex -->
+      <div class="row m-2 gallery-card tablink-data-science animated active" style="background-image: url('img/projects/house-prices-kaggle.png')">
+        <div class="row h-100 card-content d-flex align-items-start flex-column">
         <div class="row align-items-start text-center">
           <div class="h3 col-12 card-header">House prices prediction</div>
         </div>
-        <div class="row align-items-end justify-content-center">
-          <div id="house-prices-kaggle" class="button-gallery-card" data-toggle="modal" data-target="#modalCenter"
+        <div class="row align-items-end mt-auto p-2 justify-content-center">
+          <div id="house-prices-kaggle" class="col-12 button-gallery-card" data-toggle="modal" data-target="#modalCenter"
             onclick=ButtonCardClick(this.id)>
             <p>more</p>
           </div>
@@ -299,12 +301,14 @@
           </p>
         </div>
       </div>
+    </div>
       <!-- work 2 card -->
-      <div class="row m-2 gallery-card" style="background-image: url('img/projects/taxi-orders-prediction.png')">
+      <div class="row m-2 gallery-card tablink-full-stack animated active align-items-start flex-column" style="background-image: url('img/projects/taxi-orders-prediction.png')">
+        <div class="row h-100 card-content d-flex align-items-start flex-column">
         <div class="row align-items-start text-center">
           <div class="h3 col-12 card-header">Taxi orders prediction</div>
         </div>
-        <div class="row align-items-end justify-content-center">
+        <div class="row align-items-end mt-auto p-2 justify-content-center">
           <div id="taxi-orders-prediction" class="button-gallery-card" data-toggle="modal" data-target="#modalCenter"
             onclick=ButtonCardClick(this.id)>
             <p>more</p>
@@ -317,6 +321,30 @@
           </p>
         </div>
       </div>
+      </div>
+    <!-- </div> -->
+    <!-- <div id="Full-stack" class="row tabcontent active justify-content-center"> -->
+      <!-- work 1 card -->
+      <div class="row m-2 gallery-card tablink-data-science animated active align-items-start flex-column" style="background-image: url('img/projects/taxi-orders-prediction.png')">
+        <div class="row h-100 card-content d-flex align-items-start flex-column">
+        <div class="row align-items-start text-center">
+          <div class="h3 col-12 card-header">Taxi orders prediction</div>
+        </div>
+        <div class="row align-items-end mt-auto p-2 justify-content-center">
+          <div id="taxi-orders-prediction" class="button-gallery-card" data-toggle="modal" data-target="#modalCenter"
+            onclick=ButtonCardClick(this.id)>
+            <p>more</p>
+          </div>
+        </div>
+        <div id="taxi-orders-prediction-description" class="d-none">
+          <p id="taxi-orders-prediction-description-title">Taxi orders prediction</p>
+          <p id="taxi-orders-prediction-description-text">
+            Task is to build a model which will have RMSE lower than 48.
+          </p>
+        </div>
+      </div>
+      </div>
+    <!-- </div> -->
       <!-- modal -->
       <!-- dynamic in ButtonCardClick -->
       <div class="modal fade" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle"
