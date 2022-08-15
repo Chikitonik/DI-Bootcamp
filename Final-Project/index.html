@@ -96,7 +96,7 @@
       About
     </div>
     <!-- #region tools -->
-    <div class="row ms-1 mb-5">
+    <div class="row ms-3 mb-5">
       <div class="col-2">
         <div class="flip-card-text flip-appear hidden">
           <div class="flip-card-inner flip-appear">
@@ -128,7 +128,7 @@
             </div>
           </div>
         </div>
-        <div class="flip-card flip-appear hidden">
+        <div class="mx-2 flip-card flip-appear hidden">
           <div class="flip-card-inner flip-appear">
             <div class="flip-card-front"></div>
             <div class="flip-card-back">
@@ -140,7 +140,7 @@
             </div>
           </div>
         </div>
-        <div class="flip-card flip-appear hidden">
+        <div class="mx-4 flip-card flip-appear hidden">
           <div class="flip-card-inner flip-appear">
             <div class="flip-card-front"></div>
             <div class="flip-card-back">
@@ -164,7 +164,7 @@
             </div>
           </div>
         </div>
-        <div class="flip-card flip-appear hidden">
+        <div class="mx-2 flip-card flip-appear hidden">
           <div class="flip-card-inner flip-appear">
             <div class="flip-card-front"></div>
             <div class="flip-card-back">
@@ -176,7 +176,7 @@
             </div>
           </div>
         </div>
-        <div class="flip-card flip-appear hidden">
+        <div class="mx-4 flip-card flip-appear hidden">
           <div class="flip-card-inner flip-appear">
             <div class="flip-card-front"></div>
             <div class="flip-card-back">
@@ -202,7 +202,7 @@
             </div>
           </div>
         </div>
-        <div class="flip-card flip-appear hidden">
+        <div class="mx-2 flip-card flip-appear hidden">
           <div class="flip-card-inner flip-appear">
             <div class="flip-card-front"></div>
             <div class="flip-card-back">
@@ -213,7 +213,7 @@
             </div>
           </div>
         </div>
-        <div class="flip-card flip-appear hidden">
+        <div class="mx-4 flip-card flip-appear hidden">
           <div class="flip-card-inner flip-appear">
             <div class="flip-card-front"></div>
             <div class="flip-card-back">
@@ -227,7 +227,7 @@
         </div>
       </div>
       <!-- #endregion tools -->
-      <div class="col-10">
+      <div class="mx-2 col-9">
         <div class="row">
           <div class="col-md-4 slide-from-left hidden">
             <img src="img/avatar_rhombus.png" class="avatar" alt="Avatar">
@@ -271,23 +271,24 @@
     </div>
     <div class="tabs row">
       <div class="col-12 text-center">
-        <button class="tablinks mx-4 active" onclick="activateTab(event, 'gallery-card')">All</button>
-        <button class="tablinks mx-4" onclick="activateTab(event, 'tablink-full-stack')">Full-stack</button>
-        <button class="tablinks mx-4" onclick="activateTab(event, 'tablink-data-science')">Data science</button>
+        <button class="tablinks mx-4 slide-from-left hidden active" onclick="activateTab(event, 'gallery-card')">All</button>
+        <button class="tablinks mx-4 slide-from-left hidden" onclick="activateTab(event, 'tablink-full-stack')">Full-stack</button>
+        <button class="tablinks mx-4 slide-from-left hidden" onclick="activateTab(event, 'tablink-data-science')">Data science</button>
       </div>
     </div>
     <!-- All works -->
     <!-- <div id="Data science" class="row tabcontent active justify-content-center"> -->
-      <!-- work 1 card -->
-      <!-- d-flex -->
-      <div class="row m-2 gallery-card tablink-data-science animated active" style="background-image: url('img/projects/house-prices-kaggle.png')">
-        <div class="row h-100 card-content d-flex align-items-start flex-column">
+    <div class="row mx-3">
+      <!-- work card -->
+    <div class="row m-2 gallery-card tablink-data-science active hidden"
+      style="background-image: url('img/projects/house-prices-kaggle.png')">
+      <div class="row h-100 card-content d-flex align-items-start flex-column">
         <div class="row align-items-start text-center">
           <div class="h3 col-12 card-header">House prices prediction</div>
         </div>
         <div class="row align-items-end mt-auto p-2 justify-content-center">
-          <div id="house-prices-kaggle" class="col-12 button-gallery-card" data-toggle="modal" data-target="#modalCenter"
-            onclick=ButtonCardClick(this.id)>
+          <div id="house-prices-kaggle" class="col-12 button-gallery-card" data-toggle="modal"
+            data-target="#modalCenter" onclick=ButtonCardClick(this.id)>
             <p>more</p>
           </div>
         </div>
@@ -302,9 +303,10 @@
         </div>
       </div>
     </div>
-      <!-- work 2 card -->
-      <div class="row m-2 gallery-card tablink-full-stack animated active align-items-start flex-column" style="background-image: url('img/projects/taxi-orders-prediction.png')">
-        <div class="row h-100 card-content d-flex align-items-start flex-column">
+    <!-- work card -->
+    <div class="row m-2 gallery-card tablink-data-science active hidden"
+      style="background-image: url('img/projects/taxi-orders-prediction.png')">
+      <div class="row h-100 card-content d-flex align-items-start flex-column">
         <div class="row align-items-start text-center">
           <div class="h3 col-12 card-header">Taxi orders prediction</div>
         </div>
@@ -321,84 +323,106 @@
           </p>
         </div>
       </div>
-      </div>
-    <!-- </div> -->
-    <!-- <div id="Full-stack" class="row tabcontent active justify-content-center"> -->
-      <!-- work 1 card -->
-      <div class="row m-2 gallery-card tablink-data-science animated active align-items-start flex-column" style="background-image: url('img/projects/taxi-orders-prediction.png')">
-        <div class="row h-100 card-content d-flex align-items-start flex-column">
+    </div>
+    <!-- work card -->
+    <div class="row m-2 gallery-card tablink-full-stack active hidden"
+      style="background-image: url('img/projects/armtek-support.png')">
+      <div class="row h-100 card-content d-flex align-items-start flex-column">
         <div class="row align-items-start text-center">
-          <div class="h3 col-12 card-header">Taxi orders prediction</div>
+          <div class="h3 col-12 card-header">Armtek online shop / SAP ERP support</div>
         </div>
         <div class="row align-items-end mt-auto p-2 justify-content-center">
-          <div id="taxi-orders-prediction" class="button-gallery-card" data-toggle="modal" data-target="#modalCenter"
+          <div id="armtek-support" class="button-gallery-card" data-toggle="modal" data-target="#modalCenter"
             onclick=ButtonCardClick(this.id)>
             <p>more</p>
           </div>
         </div>
-        <div id="taxi-orders-prediction-description" class="d-none">
-          <p id="taxi-orders-prediction-description-title">Taxi orders prediction</p>
-          <p id="taxi-orders-prediction-description-text">
-            Task is to build a model which will have RMSE lower than 48.
+        <div id="armtek-support-description" class="d-none">
+          <p id="armtek-support-description-title">Armtek online shop / SAP ERP support</p>
+          <p id="armtek-support-description-text">
+            Supporting online shop <a
+            href="https://etp.armtek.eu"
+            target="_blank"> Armtek</a>, API and SAP ERP support
           </p>
         </div>
       </div>
+    </div>
+    <!-- work card -->
+    <div class="row m-2 gallery-card tablink-data-science active hidden"
+      style="background-image: url('img/projects/toxic-comment-classification.png')">
+      <div class="row h-100 card-content d-flex align-items-start flex-column">
+        <div class="row align-items-start text-center">
+          <div class="h3 col-12 card-header">Toxic comments classification</div>
+        </div>
+        <div class="row align-items-end mt-auto p-2 justify-content-center">
+          <div id="toxic-comment-classification" class="button-gallery-card" data-toggle="modal" data-target="#modalCenter"
+            onclick=ButtonCardClick(this.id)>
+            <p>more</p>
+          </div>
+        </div>
+        <div id="toxic-comment-classification-description" class="d-none">
+          <p id="toxic-comment-classification-description-title">Toxic comments classification</p>
+          <p id="toxic-comment-classification-description-text">
+            Toxic comment classification, BERT solution.
+          </p>
+        </div>
       </div>
-    <!-- </div> -->
-      <!-- modal -->
-      <!-- dynamic in ButtonCardClick -->
-      <div class="modal fade" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-body pt-md-0 pb-md-5 text-center">
-              <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="10000">
-                    <img id="carousel-item-img-1" class="img-fluid d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <img id="carousel-item-img-2" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img id="carousel-item-img-3" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                  data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                  data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+    </div>
+  </div>
+    <!-- modal -->
+    <!-- dynamic in ButtonCardClick -->
+    <div class="modal fade" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body pt-md-0 pb-md-5 text-center">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
               </div>
-            </div>
-            <div class="modal-footer">
-              <div class="row">
-                <div id="modal-footer-title" class="h3"></div>
-                <div id="modal-footer-text"></div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <img id="carousel-item-img-1" class="img-fluid d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img id="carousel-item-img-2" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img id="carousel-item-img-3" class="d-block w-100" alt="...">
+                </div>
               </div>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
               </button>
             </div>
           </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div id="modal-footer-title" class="h3"></div>
+              <div id="modal-footer-text"></div>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
         </div>
       </div>
+    </div>
 
-      <!-- ======================================= -->
-      <!-- ======================================= -->
+    <!-- ======================================= -->
+    <!-- ======================================= -->
 
 
   </section>
@@ -427,7 +451,6 @@
       </form>
     </div>
 
-    </footer>
     <footer id="footer" class="flex-shrink-0 py-5 bg-dark">
       <div class="row justify-content-center">
         <div class="button-footer-home" onclick="window.location.href='#home'">
@@ -437,22 +460,22 @@
           </div>
         </div>
       </div>
-      <div class="container text-center">
+      <div class="col-12 text-center">
         <a class="h4">Find me here:</a>
         <a href="https://api.whatsapp.com/send?phone=+972504694780" target="_blank" title="whatsapp">
-          <i class="fa-2x mx-3 fa-brands fa-whatsapp"></i>
+          <i class="fa-2x mx-1 fa-brands fa-whatsapp"></i>
         </a>
         <a href="https://www.linkedin.com/in/roman-kholodkov-sap-sd" target="_blank" title="linkedin">
-          <i class="fa-2x mx-3 fa-brands fa-linkedin"></i>
+          <i class="fa-2x mx-1 fa-brands fa-linkedin"></i>
         </a>
         <a href="https://github.com/Chikitonik" target="_blank" title="github">
-          <i class="fa-2x mx-3 fa-brands fa-github"></i>
+          <i class="fa-2x mx-1 fa-brands fa-github"></i>
         </a>
         <a href="https://www.kaggle.com/romankholodkov" target="_blank" title="kaggle">
-          <i class="fa-2x mx-3 fa-brands fa-kaggle"></i>
+          <i class="fa-2x mx-1 fa-brands fa-kaggle"></i>
         </a>
         <a href="mailto:chikitonik@gmail.com?subject = Feedback&body = Message:" title="mail">
-          <i class="fa-2x mx-3 fa-solid fa-envelope"></i>
+          <i class="fa-2x mx-1 fa-solid fa-envelope"></i>
         </a>
       </div>
     </footer>

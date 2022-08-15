@@ -255,6 +255,35 @@ canvas {
     visibility: hidden;
 }
 
+/* .slide-from-bottom {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+    background-color: #000; color: #FFF;
+    transition: all 1s;
+  } */
+
+/* .animated.slide-from-bottom {
+    top: 100%;
+  height: 0;
+} */
+.animated.slide-from-bottom {
+    /* position: relative; */
+    animation: showBottom 1s;
+}
+
+@keyframes showBottom {
+    from {
+        bottom: -50px;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
+
 /* #endregion slide */
 
 .avatar {
@@ -372,8 +401,10 @@ canvas {
 .gallery-card {
     height: 300px;
     width: 400px;
-    background-position: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
 .gallery-card:hover {
     background-image: none !important;
 }
@@ -382,7 +413,7 @@ canvas {
 .button-gallery-card {
     display: block;
     width: 100px;
-    height:30px;
+    height: 30px;
     cursor: pointer;
     color: #333;
     border: 1px solid #333;
@@ -393,12 +424,13 @@ canvas {
     text-align: center;
     transition: all .35s;
 }
+
 .button-gallery-card p {
-position: relative;
-z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
-.button-gallery-card:after{
+.button-gallery-card:after {
     position: absolute;
     content: "";
     top: 0;
@@ -407,16 +439,16 @@ z-index: 2;
     height: 100%;
     background: #5afaed;
     transition: all .35s;
-  }
+}
 
 .button-gallery-card:hover {
     color: #fff;
     text-shadow: #000;
 }
 
-.button-gallery-card:hover:after{
+.button-gallery-card:hover:after {
     width: 100%;
-  }
+}
 
 .gallery-card:hover>.row .button-gallery-card {
     visibility: visible;
@@ -430,6 +462,7 @@ z-index: 2;
     transform: translateY(0);
     transition: all .3s ease-out;
 }
+
 .gallery-card:hover>.row .card-header {
     visibility: visible;
     opacity: 1;
@@ -441,11 +474,12 @@ z-index: 2;
     height: 450px;
     /* width: 700px; */
 }
+
 .carousel-inner .carousel-item {
     height: 450px;
     /* width: 700px; */
-  }
-  
+}
+
 /* #endregion tabs */
 
 

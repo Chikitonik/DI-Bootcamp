@@ -4,7 +4,7 @@ function ButtonMainCanvasClick() {
 // #region scroll listener
 const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav .nav-link');
-const animation = document.querySelectorAll('.slide-from-right, .slide-from-left, .flip-appear');
+const animation = document.querySelectorAll('.slide-from-right, .slide-from-left, .flip-appear, .gallery-card');
 // highlight nav bar links
 window.addEventListener('scroll', () => {
   let currentSection = '';
@@ -31,7 +31,7 @@ window.addEventListener('scroll', () => {
     // console.log("windowHeight:", windowHeight)
     // console.log("elementTop:", elementTop)
     // console.log("window.pageYOffset:", window.pageYOffset)
-    if (window.pageYOffset >= (elementTop - windowHeight * .3)) {
+    if (window.pageYOffset >= (elementTop - windowHeight * .2)) {
       element.classList.add('animated');
       element.classList.remove('hidden');
     }
