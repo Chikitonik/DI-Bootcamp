@@ -43,23 +43,32 @@ window.addEventListener('scroll', () => {
 // #region tabs
 function activateTab(evt, tabName) {
   var i, allGalleryCards, tablinks, selectedGalleryCards;
-  
-  allGalleryCards = document.getElementsByClassName("gallery-card");
 
-  for (i = 0; i < allGalleryCards.length; i++) {
-    allGalleryCards[i].style.display = "none";
-    allGalleryCards[i].classList.remove('animated');
-  }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  allGalleryCards = document.getElementsByClassName("gallery-card");
+  for (i = 0; i < allGalleryCards.length; i++) {
+    allGalleryCards[i].style.display = "none";
+    allGalleryCards[i].classList.remove('animated');
   }
   selectedGalleryCards = document.getElementsByClassName(tabName);
   for (i = 0; i < selectedGalleryCards.length; i++) {
     selectedGalleryCards[i].style.display = "block";
     selectedGalleryCards[i].classList.add('animated');
+    // using css
+    // selectedGalleryCards[i].style.animation = 'showScale 3s'
+    // console.log("start animation::", selectedGalleryCards[i])
+  //     setTimeout(() => {
+  //   for (i = 0; i < allGalleryCards.length; i++) {
+  //     allGalleryCards[i].classList.remove('animated');
+  //   };
+  // }, 1000);
   }
   evt.currentTarget.className += " active";
+
+
 }
 // #endregion tabs
 

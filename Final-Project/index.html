@@ -248,6 +248,8 @@
                 <a href="https://practicum.yandex.com/data-scientist/" target="_blank">Data scientist</a>,
                 I also participate in different competitions on Kaggle.com and
                 improve my skills on other platforms.
+                I’m currently studying on <a href="https://developers.institute/en/portfolios/best-coding-bootcamp-tel-aviv-israel/"
+                target="_blank">developers.institute</a>
                 <br>
                 You can find my CV <a
                   href="https://github.com/Chikitonik/Chikitonik/blob/main/Resume-Roman-Kholodkov.pdf"
@@ -271,104 +273,157 @@
     </div>
     <div class="tabs row">
       <div class="col-12 text-center">
-        <button class="tablinks mx-4 slide-from-left hidden active" onclick="activateTab(event, 'gallery-card')">All</button>
-        <button class="tablinks mx-4 slide-from-left hidden" onclick="activateTab(event, 'tablink-full-stack')">Full-stack</button>
-        <button class="tablinks mx-4 slide-from-left hidden" onclick="activateTab(event, 'tablink-data-science')">Data science</button>
+        <button class="tablinks mx-2 slide-from-left hidden active"
+          onclick="activateTab(event, 'gallery-card')">All</button>
+        <button class="tablinks mx-2 slide-from-left hidden"
+          onclick="activateTab(event, 'tablink-full-stack')">Full-stack</button>
+        <button class="tablinks mx-2 slide-from-left hidden" onclick="activateTab(event, 'tablink-data-science')">Data
+          science</button>
       </div>
     </div>
     <!-- All works -->
     <!-- <div id="Data science" class="row tabcontent active justify-content-center"> -->
-    <div class="row mx-3">
+    <div class="row m-3">
       <!-- work card -->
-    <div class="row m-2 gallery-card tablink-data-science active hidden"
-      style="background-image: url('img/projects/house-prices-kaggle.png')">
-      <div class="row h-100 card-content d-flex align-items-start flex-column">
-        <div class="row align-items-start text-center">
-          <div class="h3 col-12 card-header">House prices prediction</div>
-        </div>
-        <div class="row align-items-end mt-auto p-2 justify-content-center">
-          <div id="house-prices-kaggle" class="col-12 button-gallery-card" data-toggle="modal"
-            data-target="#modalCenter" onclick=ButtonCardClick(this.id)>
-            <p>more</p>
+      <div class="row m-0 p-0 gallery-card tablink-data-science active hidden"
+        style="background-image: url('img/projects/house-prices-kaggle.png')">
+        <div class="row h-100 card-content d-flex align-items-start flex-column">
+          <div class="row align-items-start text-center">
+            <div class="h3 col-12 card-header">House prices prediction</div>
+          </div>
+          <div class="row align-items-end mt-auto p-2 justify-content-center">
+            <div id="house-prices-kaggle" class="col-12 button-gallery-card" data-toggle="modal"
+              data-target="#modalCenter" onclick=ButtonCardClick(this.id)>
+              <p>more</p>
+            </div>
+          </div>
+          <div id="house-prices-kaggle-description" class="d-none">
+            <p id="house-prices-kaggle-description-title">House prices prediction</p>
+            <p id="house-prices-kaggle-description-text">
+              Task is to build a model which will be predicting the house prices.
+              That is a competition at Kaggle (top 3%), <a
+                href="https://github.com/Chikitonik/house-prices-kaggle/blob/main/house_prices_kaggle.ipynb"
+                target="_blank"> view work</a> in the form iPython Notebook
+            </p>
           </div>
         </div>
-        <div id="house-prices-kaggle-description" class="d-none">
-          <p id="house-prices-kaggle-description-title">House prices prediction</p>
-          <p id="house-prices-kaggle-description-text">
-            Task is to build a model which will be predicting the house prices.
-            That is a competition at Kaggle (top 3%), <a
-              href="https://github.com/Chikitonik/house-prices-kaggle/blob/main/house_prices_kaggle.ipynb"
-              target="_blank"> view work</a> in the form iPython Notebook
-          </p>
-        </div>
       </div>
-    </div>
-    <!-- work card -->
-    <div class="row m-2 gallery-card tablink-data-science active hidden"
-      style="background-image: url('img/projects/taxi-orders-prediction.png')">
-      <div class="row h-100 card-content d-flex align-items-start flex-column">
-        <div class="row align-items-start text-center">
-          <div class="h3 col-12 card-header">Taxi orders prediction</div>
-        </div>
-        <div class="row align-items-end mt-auto p-2 justify-content-center">
-          <div id="taxi-orders-prediction" class="button-gallery-card" data-toggle="modal" data-target="#modalCenter"
-            onclick=ButtonCardClick(this.id)>
-            <p>more</p>
+      <!-- work card -->
+      <div class="row m-0 p-0 gallery-card tablink-data-science active hidden"
+        style="background-image: url('img/projects/taxi-orders-prediction.png')">
+        <div class="row h-100 card-content d-flex align-items-start flex-column">
+          <div class="row align-items-start text-center">
+            <div class="h3 col-12 card-header">Taxi orders prediction</div>
+          </div>
+          <div class="row align-items-end mt-auto p-2 justify-content-center">
+            <div id="taxi-orders-prediction" class="button-gallery-card" data-toggle="modal" data-target="#modalCenter"
+              onclick=ButtonCardClick(this.id)>
+              <p>more</p>
+            </div>
+          </div>
+          <div id="taxi-orders-prediction-description" class="d-none">
+            <p id="taxi-orders-prediction-description-title">Taxi orders prediction</p>
+            <p id="taxi-orders-prediction-description-text">
+              Task is to build a model which will have RMSE lower than 48. <a
+              href="https://github.com/Chikitonik/taxi-orders/blob/main/12_taxi_orders.ipynb" target="_blank"> View
+              work</a> in the form iPython Notebook
+            </p>
           </div>
         </div>
-        <div id="taxi-orders-prediction-description" class="d-none">
-          <p id="taxi-orders-prediction-description-title">Taxi orders prediction</p>
-          <p id="taxi-orders-prediction-description-text">
-            Task is to build a model which will have RMSE lower than 48.
-          </p>
-        </div>
       </div>
-    </div>
-    <!-- work card -->
-    <div class="row m-2 gallery-card tablink-full-stack active hidden"
-      style="background-image: url('img/projects/armtek-support.png')">
-      <div class="row h-100 card-content d-flex align-items-start flex-column">
-        <div class="row align-items-start text-center">
-          <div class="h3 col-12 card-header">Armtek online shop / SAP ERP support</div>
-        </div>
-        <div class="row align-items-end mt-auto p-2 justify-content-center">
-          <div id="armtek-support" class="button-gallery-card" data-toggle="modal" data-target="#modalCenter"
-            onclick=ButtonCardClick(this.id)>
-            <p>more</p>
+      <!-- work card -->
+      <div class="row m-0 p-0 gallery-card tablink-full-stack active hidden"
+        style="background-image: url('img/projects/armtek-support.png')">
+        <div class="row h-100 card-content d-flex align-items-start flex-column">
+          <div class="row align-items-start text-center">
+            <div class="h3 col-12 card-header">Armtek online shop / SAP ERP support</div>
+          </div>
+          <div class="row align-items-end mt-auto p-2 justify-content-center">
+            <div id="armtek-support" class="button-gallery-card" data-toggle="modal" data-target="#modalCenter"
+              onclick=ButtonCardClick(this.id)>
+              <p>more</p>
+            </div>
+          </div>
+          <div id="armtek-support-description" class="d-none">
+            <p id="armtek-support-description-title">Armtek online shop / SAP ERP support</p>
+            <p id="armtek-support-description-text">
+              Supporting online shop <a href="https://etp.armtek.eu" target="_blank"> Armtek</a>, API and SAP ERP
+              support
+            </p>
           </div>
         </div>
-        <div id="armtek-support-description" class="d-none">
-          <p id="armtek-support-description-title">Armtek online shop / SAP ERP support</p>
-          <p id="armtek-support-description-text">
-            Supporting online shop <a
-            href="https://etp.armtek.eu"
-            target="_blank"> Armtek</a>, API and SAP ERP support
-          </p>
-        </div>
       </div>
-    </div>
-    <!-- work card -->
-    <div class="row m-2 gallery-card tablink-data-science active hidden"
-      style="background-image: url('img/projects/toxic-comment-classification.png')">
-      <div class="row h-100 card-content d-flex align-items-start flex-column">
-        <div class="row align-items-start text-center">
-          <div class="h3 col-12 card-header">Toxic comments classification</div>
-        </div>
-        <div class="row align-items-end mt-auto p-2 justify-content-center">
-          <div id="toxic-comment-classification" class="button-gallery-card" data-toggle="modal" data-target="#modalCenter"
-            onclick=ButtonCardClick(this.id)>
-            <p>more</p>
+      <!-- work card -->
+      <div class="row m-0 p-0 gallery-card tablink-data-science active hidden"
+        style="background-image: url('img/projects/toxic-comment-classification.png')">
+        <div class="row h-100 card-content d-flex align-items-start flex-column">
+          <div class="row align-items-start text-center">
+            <div class="h3 col-12 card-header">Toxic comments classification</div>
+          </div>
+          <div class="row align-items-end mt-auto p-2 justify-content-center">
+            <div id="toxic-comment-classification" class="col-12 button-gallery-card" data-toggle="modal"
+              data-target="#modalCenter" onclick=ButtonCardClick(this.id)>
+              <p>more</p>
+            </div>
+          </div>
+          <div id="toxic-comment-classification-description" class="d-none">
+            <p id="toxic-comment-classification-description-title">Toxic comments classification</p>
+            <p id="toxic-comment-classification-description-text">
+              Toxic comment classification, BERT solution.. <a
+                href="https://github.com/Chikitonik/toxic-comments/blob/main/toxic_comments.ipynb" target="_blank"> View
+                work</a> in the form iPython Notebook
+            </p>
           </div>
         </div>
-        <div id="toxic-comment-classification-description" class="d-none">
-          <p id="toxic-comment-classification-description-title">Toxic comments classification</p>
-          <p id="toxic-comment-classification-description-text">
-            Toxic comment classification, BERT solution.
-          </p>
+      </div>
+      <!-- work card -->
+      <div class="row m-0 p-0 gallery-card tablink-data-science active hidden"
+        style="background-image: url('img/projects/churn-clients.png')">
+        <div class="row h-100 card-content d-flex align-items-start flex-column">
+          <div class="row align-items-start text-center">
+            <div class="h3 col-12 card-header">Churn bank clients prediction</div>
+          </div>
+          <div class="row align-items-end mt-auto p-2 justify-content-center">
+            <div id="churn-clients" class="col-12 button-gallery-card" data-toggle="modal" data-target="#modalCenter"
+              onclick=ButtonCardClick(this.id)>
+              <p>more</p>
+            </div>
+          </div>
+          <div id="churn-clients-description" class="d-none">
+            <p id="churn-clients-description-title">Churn bank clients prediction</p>
+            <p id="churn-clients-description-text">
+              Work on kaggle.com, task is to predict whether the client leaves the bank in the near future or not. <a
+                href="https://github.com/Chikitonik/churn-clients/blob/main/churn-clients.ipynb" target="_blank"> View
+                work</a> in the form iPython Notebook
+            </p>
+          </div>
         </div>
       </div>
+            <!-- work card -->
+            <div class="row m-0 p-0 gallery-card tablink-data-science active hidden"
+            style="background-image: url('img/projects/gold-recovery.png')">
+            <div class="row h-100 card-content d-flex align-items-start flex-column">
+              <div class="row align-items-start text-center">
+                <div class="h3 col-12 card-header">Gold recovery rate prediction</div>
+              </div>
+              <div class="row align-items-end mt-auto p-2 justify-content-center">
+                <div id="gold-recovery" class="col-12 button-gallery-card" data-toggle="modal" data-target="#modalCenter"
+                  onclick=ButtonCardClick(this.id)>
+                  <p>more</p>
+                </div>
+              </div>
+              <div id="gold-recovery-description" class="d-none">
+                <p id="gold-recovery-description-title">Gold recovery rate prediction</p>
+                <p id="gold-recovery-description-text">
+                  Task is to build a model which will be predicting the gold recovery rate from gold ore. <a
+                    href="https://github.com/Chikitonik/gold-mining/blob/main/gold_mining.ipynb" target="_blank"> View
+                    work</a> in the form iPython Notebook
+                </p>
+              </div>
+            </div>
+          </div>
+      <!-- end works -->
     </div>
-  </div>
     <!-- modal -->
     <!-- dynamic in ButtonCardClick -->
     <div class="modal fade" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle"
@@ -420,9 +475,6 @@
         </div>
       </div>
     </div>
-
-    <!-- ======================================= -->
-    <!-- ======================================= -->
 
 
   </section>
