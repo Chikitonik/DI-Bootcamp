@@ -464,6 +464,28 @@ canvas {
     /* width: 700px; */
 }
 
+/* carousel buttons */
+.close {
+    border: none;
+    /* background-color: none; */
+    background: none;
+    font-size: 35px;
+    color: grey;
+}
+
+.close:hover {
+    color:black;
+}
+
+.carousel-control-prev,
+.carousel-control-next,
+.carousel-indicators{
+    align-items:flex-end;
+}
+.modal {
+    --bs-modal-footer-border-width: 4px;
+    --bs-modal-footer-border-color: rgb(145, 145, 145);
+}
 /* #endregion tabs */
 
 
