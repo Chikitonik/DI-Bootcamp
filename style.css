@@ -12,13 +12,12 @@ p {
     margin-left: 25px;
 }
 
-#sticky-header {
+.sticky-header {
     background-color:#fff3cd;
-}
-.sticky {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     /* width: 100% */
+    position: sticky;
   }
   
   .sticky + {
