@@ -1,0 +1,45 @@
+body {
+    margin-left: 15px;
+}
+
+div, h1, h2, img, table {
+    margin-top: 15px;
+}
+
+.yellowBackground {
+    background-color: yellow;
+}
+
+.red {
+    color: red;
+}
+
+.center {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.border {
+    border: 1px solid;
+    margin: 15px 50px 0 50px;
+}
+
+ul, table {
+    list-style-type: initial;
+    margin: 15px 50px 0 50px;
+}
+
+.bold {
+    font-weight: bold
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+img {
+    border: 5px solid;
+    border-color: chocolate;
+}
