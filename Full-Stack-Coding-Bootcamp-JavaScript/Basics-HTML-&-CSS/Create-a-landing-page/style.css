@@ -1,0 +1,65 @@
+body {
+    background-image: url(https://images.pexels.com/photos/63340/pexels-photo-63340.jpeg?cs=srgb&dl=pexels-sara-63340.jpg&fm=jpg);
+    /* background-image: url(https://user-images.githubusercontent.com/30896388/168065085-1eec04c7-7b09-466b-8705-86e5a26db88b.png); */
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.navBar {
+    height: 30px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.navBar div {
+    margin-right: 20px;
+}
+.centerBlock {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+.centerText {
+    font-size: 30px;
+    color:white;
+    line-height: 40px;
+}
+.footer {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer .fa-solid {
+    color:rgb(65, 128, 245);
+    font-size: 80px;
+    margin-left: 20px;
+}
+.footerIcons, .footerText {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footerText .fa-solid {
+    font-size: 30px;
+    color:white;
+    line-height: 40px;
+}
+.whiteBgr {
+    background-color: white;
+}
+button{
+    width: 80px;
+    height: 25px;
+    background-color:cornflowerblue;
+    border:none;
+    border-radius: 3px;
+    color:white;
+}
