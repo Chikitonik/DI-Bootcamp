@@ -1,0 +1,23 @@
+body, html {
+    /* min-width: fit-content; */
+    height: 100%;
+    font-family: 'Gafata', sans-serif;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/* #region footer */
+a {
+    text-decoration: none;
+    /* color: #428681; */
+}
+/* icons glow effect */
+.fa-2x:hover {
+    color: #5afaed;
+    /* text-shadow: 0 0 5px #5afaed; */
+}
+/* #endregion footer */
