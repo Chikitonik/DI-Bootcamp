@@ -1,0 +1,60 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+
+}
+
+body {
+    background-image: url("img/main_background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px 0 25px;
+    background-color: black;
+    color: white;
+}
+
+.linkProducts>a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    color: white;
+    text-shadow: 0 0 2px #000;
+}
+
+.mainLinks {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 300px;
+    margin: 50px 0 50px 300px;
+}
+
+.mainLinks>a {
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 2px #000;
+    font-family: 'Nunito Sans', sans-serif;
+}

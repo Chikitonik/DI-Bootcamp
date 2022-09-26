@@ -1,7 +1,7 @@
 @font-face {
     font-family: anton;
     src: url("fonts/Anton-Regular.ttf");
-  }
+}
 
 body,
 html {
@@ -15,8 +15,9 @@ html {
     background-color: rgb(230, 176, 30);
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
 }
+
 .navLinks {
     display: flex;
     width: 600px;
@@ -46,6 +47,17 @@ html {
     /* background-size: 200px 280px;" */
 }
 
+.titleMain {
+    font-family: anton;
+    font-size: 35px;
+    color: rgb(141, 9, 9);
+    text-shadow: 0 0 2px #000;
+    margin-bottom: 400px;
+    margin-right: 100px;
+    position: absolute;
+    ;
+}
+
 .main {
     width: 100%;
     height: 94%;
@@ -53,27 +65,31 @@ html {
     background-size: cover;
     display: flex;
     flex-direction: row;
-    justify-content:end;
+    justify-content: end;
     align-items: flex-end;
 }
+
 .mainText {
     background-color: rgb(230, 176, 30);
     width: 500px;
     height: 300px;
     margin-bottom: 70px;
     margin-right: 70px;
-    padding:30px 10px 20px 10px;
+    padding: 30px 10px 20px 10px;
     font-family: anton;
     color: rgb(141, 9, 9);
     text-align: center;
     border-radius: 10px;
 }
+
 .hided {
-    display:none;
+    display: none;
 }
+
 ul {
     list-style-type: none;
 }
+
 /*------------------------------------------
   Responsive Grid Media Queries - 1280, 1024, 768, 480
    1280-1024   - desktop (default grid)
@@ -81,23 +97,71 @@ ul {
    768-480     - tablet 
    480-less    - phone landscape & smaller
 --------------------------------------------*/
+/* Using the Avengers Daily Challenge, we will add media queries to change 
+the styling of the page depending on the screen size (computer, tablet, smartphone).
+Font size of the title
+--- on Medium devices (landscape tablets, 768px and up) : 25px
+--- on Small devices (portrait tablets and large phones, 600px and up): 35px
+Navbar background color
+--- Small devices : yellow and font color black
+--- Medium devices : lightgreen and font color black.
+--- Large devices (laptops/desktops, 992px and up) : red and font color white.
+- Extra large devices (large laptops and desktops, 1200px and up) : black and font color white.
+Position of the text
+- Large devices: the title is next to the paragraph.
+- Small devices: the title is above the paragraph. */
 @media all and (min-width: 1024px) and (max-width: 1280px) {
-
-}
-
-@media all and (min-width: 768px) and (max-width: 1024px) { }
-
-@media all and (min-width: 480px) and (max-width: 768px) { }
-
-@media all and (max-width: 480px) {
-    .mainText {
-        width: 100%;
-        margin: 0;
-        border-radius: 0;
+    .navbar {
+        background-color: red;
     }
     .navLinks {
-        font-size: 20px;
-        display: flex;
-        /* flex-direction: column; */
+        color: white;
     }
 }
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .titleMain {
+        font-size: 25px;
+    }
+
+    .navLinks {
+        font-size: 35px;
+        display: flex;
+    }
+    .navbar {
+        background-color: lightgreen;
+    }
+    .navLinks {
+        color: black;
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .titleMain {
+        font-size: 35px;
+    }
+
+    .navbar {
+        background-color: yellow;
+    }
+
+    .navLinks {
+        color: black;
+        font-size:30px;
+    }
+}
+
+    @media all and (max-width: 480px) {
+        .main {
+            height: 100%;
+            background-size: 100%;
+        }
+
+        .mainText {
+            width: 100%;
+            height: 60%;
+            margin: 0;
+            border-radius: 0;
+        }
+
+    }

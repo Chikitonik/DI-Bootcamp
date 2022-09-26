@@ -1,0 +1,175 @@
+body {
+    background-image: none !important;
+}
+/* .main {
+    display:flex;
+    flex-direction:column;
+} */
+.main {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+#card1 > .imageHolder {
+    background-image: url("img/image1.png");
+}
+#card2 > .imageHolder {
+    background-image: url("img/image2.png");
+}
+#card3 > .imageHolder {
+    background-image: url("img/image3.png");
+}
+#card4 > .imageHolder {
+    background-image: url("img/image4.png");
+}
+#card5 > .imageHolder {
+    background-image: url("img/image5.png");
+}
+#card6 > .imageHolder {
+    background-image: url("img/image6.png");
+}
+#card7 > .imageHolder {
+    background-image: url("img/image7.png");
+}
+#card8 > .imageHolder {
+    background-image: url("img/image8.png");
+}
+#card9 > .imageHolder {
+    background-image: url("img/image9.png");
+}
+#card10 > .imageHolder {
+    background-image: url("img/image10.png");
+}
+#card11 > .imageHolder {
+    background-image: url("img/image11.png");
+}
+#card12 > .imageHolder {
+    background-image: url("img/image12.png");
+}
+.card {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height:380px;
+    width:200px;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 30px;
+}
+.card:hover {
+    box-shadow: 2px 2px 7px 1px rgba(184,184,184,0.54);
+}
+.card:hover > .buttonCard{
+    color: white;
+    background-color:green;
+}
+.card:hover > .imageHolder > .cardOptionsLine {
+    visibility: visible;
+}
+.cardOptionsLine {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    margin-top: 90px;
+}
+
+.cardOptionsLine > div {
+    width: 30px;
+    height: 30px;
+    background-color:white;
+    margin: 7px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-end;
+}
+.cardOptionsLine > div > p {
+    width: 113px;
+    /* background-color: black; */
+    text-shadow: black 1px 0 7px;
+    text-align: center;
+}
+.fa-solid {
+    padding-bottom: 6px;
+}
+
+/* div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+  } */
+.cardOptionsLine div:hover {
+        /* By placing a space before the :hover, you are saying to change
+    the background color for the descendent elements (in this case i),
+    and not the actual element you are hovering into. */
+    /* background-color:green; */
+    background-color:green;
+}
+.cardOptionsLine div:hover p {
+    visibility: visible;
+    color: white;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+
+
+
+.imageHolder {
+    height:258px;
+    width:200px;
+    background-size: cover;
+    background-repeat:   no-repeat;
+}
+.icons, .prices {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    padding: 10px;
+}
+.newIcon{
+    background-color:green;
+}
+.discountIcon {
+    background-color:red;
+}
+.newIcon, .discountIcon {
+    width: 35px;
+    height: 35px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:12px;
+    font-weight:bold;
+}
+.description {
+    margin: 10px 0 10px 0;
+}
+.price {
+    color:green;
+    font-weight:bold;
+    margin-right: 6px;
+}
+.oldPrice {
+    color:grey;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+.buttonCard {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    border: 1px solid rgb(180, 180, 180);
+    width: 150px;
+    height:30px;
+    cursor: pointer;
+}
+.footer, .mainLinks{
+    visibility: hidden;
+}

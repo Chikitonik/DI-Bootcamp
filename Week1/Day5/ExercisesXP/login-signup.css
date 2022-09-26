@@ -1,0 +1,36 @@
+.footer, .mainLinks {
+    visibility: hidden;
+}
+
+.main {
+    display:flex;
+    flex-direction:row;
+    width: 500px;
+    margin-left: 50px;
+    margin-right: auto;
+    margin-top: 60px;
+    justify-content:center;
+}
+.captions, .inputs {
+    display:flex;
+    flex-direction:column;
+}
+.inputs > input {
+    padding: 0; 
+    margin: 0;
+    height: 25px;
+    border-radius:5px;
+    opacity: 0.5;
+}
+#submit {
+    opacity: 1;
+}
+.captions > label {
+    height: 25px;
+    margin-bottom: 22px;
+    margin-right: 10px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 2px #000;
+    font-family: 'Nunito Sans', sans-serif;
+}
