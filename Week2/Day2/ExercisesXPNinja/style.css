@@ -1,0 +1,77 @@
+.flex {
+    display:flex;
+    flex-direction:column;
+    gap:10vmin;
+}
+.grid {
+    display:grid;
+    grid-template-columns: repeat(3, 4vmin);
+    grid-template-rows: repeat(3, 4vmin);
+    gap: 0.5vmin;
+}
+.box1 {
+    background-color:rgb(214, 98, 63);
+}
+.box2 {
+    background-color:rgb(233, 204, 40);
+}
+.box3 {
+    background-color:rgb(146, 80, 41);
+}
+.gridWrap {
+    display:grid;
+    width: 67vmin;
+    grid-template-columns: repeat(5, 13vmin);
+    grid-template-rows: repeat(5, 13vmin);
+    gap: 0.5vmin;
+    border: 1px solid;
+}
+.grid2 {
+    display:grid;
+    grid-template-columns: repeat(4, 4vmin);
+    grid-template-rows: repeat(4, 4vmin);
+    gap: 0.5vmin;
+}
+.box4 {
+    background-color:rgb(139, 139, 139);
+}
+.box5 {
+    background-color:rgb(105, 105, 105);
+}
+.box6 {
+    background-color:rgb(70, 68, 68);
+}
+.box7 {
+    background-color:black;
+}
+.gridWrap2 {
+    display:grid;
+    width: 71.5vmin;
+    grid-template-columns: repeat(4, 17.5vmin);
+    grid-template-rows: repeat(4, 17.5vmin);
+    gap: 0.5vmin;
+    border: 1px solid;
+}
+.grid3 {
+    display:grid;
+    grid-template-columns: repeat(2, 4vmin);
+    grid-template-rows: repeat(2, 4vmin);
+    /* gap: 0.5vmin; */
+}
+.box8 {
+    background-color:white;
+}
+.box9 {
+    background-color:rgb(255, 131, 152);
+}
+.box10 {
+    background-color:red;
+}
+.gridWrap3 {
+    display:grid;
+    width: 64vmin;
+    grid-template-columns: repeat(8, 8vmin);
+    grid-template-rows: repeat(4, 8vmin);
+    /* gap: 0.5vmin; */
+    border: 1px solid;
+}

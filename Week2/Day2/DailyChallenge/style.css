@@ -1,0 +1,21 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    
+}
+.box {
+    height: 10vmin;
+    width: 10vmin;
+    background-color: yellow;
+    border: 1px solid;
+    margin: 1vmin;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+.column2 {
+    justify-self: self-end;
+}
