@@ -1,3 +1,10 @@
+
+console.log("-------------loops--------------")
+xs = ["item1", "item2", "item3"]
+for (var i = 0; i < xs.length; i++) { console.log(xs[i]); }
+xs.forEach((x, i) => console.log(x));
+for (const x of xs) { console.log(x); }
+
 console.log("-------------If else--------------")
 let age = 20;
 if (age === 18) {
@@ -56,6 +63,16 @@ if (result){
 let regex = /^.+@.+\..+$/;
 console.log(regex.test('johndoe@gmail.com')); //returns true
 
+console.log("-------------RegEx Dict replace vowels--------------");
+var word = "AaodsifoHUHOIDHhflsakdj";
+var dict = {
+    "a": 1, "e": 2, "i": 3, "o": 4, "u": 5,
+    "A": 1, "E": 2, "I": 3, "O": 4, "U": 5,
+};
+var pattern = /[aeiouAEIOU]/g;
+solution = word.replace(pattern, m => dict[m]);
+console.log(solution);
+
 console.log("-------------Short-Circuiting--------------")
 var person1 = {
     name: 'Jack',
@@ -69,3 +86,8 @@ var person1 = {
   }
   console.log(person2.age > 18 && 'Driving allowed');
   // 'Driving allowed'
+
+
+console.log("-------------Array--------------")
+console.log(...[1,3,4]);
+console.log([1,3,4]);
