@@ -1,6 +1,9 @@
 console.log("-------------Array--------------");
 console.log(...[1, 3, 4]);
 console.log([1, 3, 4]);
+console.log("String to Char array", [..."text"]);
+var array = array.filter((value) => /\d/.test(value)); // Leave just numbers
+array = new Set(array); //unique values
 
 console.log("-------------loops--------------");
 xs = ["item1", "item2", "item3"];
