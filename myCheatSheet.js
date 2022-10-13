@@ -1,3 +1,11 @@
+console.log("-------------Number--------------");
+var stringNum = "1";
+if (!isNaN(stringNum) && !!stringNum) {
+  //   //check is Number and check for empty ""
+  num = +stringNum; //convert to number
+  console.log(num);
+} else console.log("it's not a number");
+
 console.log("-------------Array--------------");
 console.log(...[1, 3, 4]);
 console.log([1, 3, 4]);
