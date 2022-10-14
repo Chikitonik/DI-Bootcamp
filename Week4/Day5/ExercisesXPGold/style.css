@@ -1,0 +1,25 @@
+body {
+    margin: 30px
+}
+button {
+  width:70px;
+  height:70px;
+  font-size: 25px;
+}
+.screen {
+    width: 205px;
+    height: 90px;
+    border: 1px solid;
+    font-size: 25px;
+    padding: 0 5px 0 5px;
+    word-wrap: break-word;
+}
+.blue {
+    background-color: rgb(94, 162, 252);
+}
+.yellow {
+    background-color: rgb(253, 252, 160);
+}
+.green {
+    background-color: rgb(160, 250, 148);
+}
