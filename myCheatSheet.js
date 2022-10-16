@@ -21,7 +21,11 @@ xs = ["item1", "item2", "item3"];
 for (var i = 0; i < xs.length; i++) {
   console.log(xs[i]);
 }
-xs.forEach((x, i) => console.log(x));
+xs.forEach(function (element, index) {
+  xs[index] = xs[index] + "aaa";
+});
+xs.forEach((e) => console.log(e));
+
 for (const x of xs) {
   console.log(x);
 }
@@ -31,7 +35,16 @@ for (let i = 0; i < 10; i++) {
   } //A loop which will skip the step where i = 3.
   "The number is " + i + "<br>";
 }
-
+console.log("----------------map----------------");
+let myArray = [1, 2, 3];
+let myNewArray = myArray.map(function (x) {
+  return x * 2;
+});
+console.log(myNewArray);
+let myNewArray2 = myArray.map((x) => x * 2);
+console.log("----------------try catch----------------");
+try {
+} catch (err) {}
 console.log("-------------If else--------------");
 let age = 20;
 if (age === 18) {
