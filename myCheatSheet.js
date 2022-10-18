@@ -162,3 +162,24 @@ var person2 = {
 };
 console.log(person2.age > 18 && "Driving allowed");
 // 'Driving allowed'
+
+console.log("-------------DOM--------------");
+let li = document.createElement("li");
+li.textContent = "Logout";
+li.innerHTML = '<a href="#"> Logout</a>';
+let ul = document.querySelector("ul");
+ul.appendChild(li);
+document.getElementById("wrapper").style.backgroundImage =
+  "url('bg-wrapper.jpg')";
+
+document.getElementById("someId").addEventListener("click", action);
+
+function action(e) {
+  e.target.style.backgroundColor = "red";
+  e.stopPropagation();
+  //   Event Propagation : relates to the order in which event handlers are called when
+  //   one element is nested inside a second element, and both elements have registered a
+  //   listener for the same event (a click, for example).
+  e.preventDefault();
+  // Many browser events have a “default action”. event.preventDefault() send a signal that those actions should be canceled.
+}
