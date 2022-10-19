@@ -15,15 +15,15 @@ p {
 .shiftBack {
     margin-left:-1.3px;
 }
-
-.sticky-header {
-    background-color:#fff3cd;
-    /* position: fixed; */
-    top: 0;
-    /* width: 100% */
-    position: sticky;
-  }
-  
-  .sticky + {
-    padding-top: 102px;
-  }
+.week {
+    cursor: pointer;
+    /* background-color: rgb(235, 201, 129); */
+    width: 130px;
+    height: 38px;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    padding-left: 1rem;
+    gap: 3px;
+    align-items: center;
+    margin-left:0;
+}

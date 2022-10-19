@@ -15,6 +15,9 @@ var array = array.filter((value) => /\d/.test(value)); // Leave just numbers
 console.log(array);
 array = new Set(array); //unique values
 console.log(array);
+shuffledArray = [1, 2, 3, 5, 6, 7, 8, 9, 10].sort(
+  (a, b) => 0.5 - Math.random()
+);
 
 console.log("-------------loops--------------");
 xs = ["item1", "item2", "item3"];
