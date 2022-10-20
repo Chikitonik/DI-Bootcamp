@@ -1,0 +1,49 @@
+html, body {
+    margin: 0;
+}
+.game {
+    display:flex;
+    flex-direction:column;
+    height:100vmin;
+    width:100vmin;
+}
+.field {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    height:80vmin;
+    width:97vmin;
+    margin-left: 1vmin;
+}
+.palette {
+    height:5vmin;
+    width:100vmin;
+    align-items: center;
+    justify-content: flex-start
+}
+.row {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    gap: 0.5vmin;
+}
+
+.clear {
+    height:3vmin;
+    width:20vmin;
+    margin-left: 1vmin;
+    background-color:#ffffff;
+    border:1px solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    cursor:pointer;
+}
+.cell {
+    height:1vmin;
+    width:1vmin;
+    background-color:white;
+    border:0.5px solid rgb(173, 173, 173);
+}
