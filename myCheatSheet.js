@@ -92,6 +92,10 @@ console.log(person.firstName); // Sarah
 delete person.firstName;
 console.log(person);
 
+for (const [key, value] of Object.entries(animals)) {
+  console.log(`${key}: ${value}`);
+}
+
 console.log("-------------Class--------------");
 class Car {
   constructor(name, year) {
@@ -178,7 +182,7 @@ document.getElementById("wrapper").style.backgroundImage =
 document.getElementById("someId").addEventListener("click", action);
 
 function action(e) {
-  e.target.style.backgroundColor = "red";
+  e.currentTarget.style.backgroundColor = "red";
   e.stopPropagation();
   //   Event Propagation : relates to the order in which event handlers are called when
   //   one element is nested inside a second element, and both elements have registered a
@@ -186,3 +190,8 @@ function action(e) {
   e.preventDefault();
   // Many browser events have a “default action”. event.preventDefault() send a signal that those actions should be canceled.
 }
+console.log("-------------setTimeout--------------");
+drum.classList.add("playing");
+setTimeout(function () {
+  drum.classList.remove("playing");
+}, 100);

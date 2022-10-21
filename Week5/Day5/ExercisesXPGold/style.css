@@ -1,0 +1,40 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('background.jpg');
+}
+body, .button {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.buttons {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap: 1vw;
+}
+.button {
+    width: 7vw;
+    height: 7vw;
+    border: 1px solid white;
+    cursor: pointer;
+    color:white;
+background: linear-gradient(135deg, #19191a 0%, #9c2828 50%, rgb(8, 78, 35) 100%);
+}
+.button div:first-child   {
+    font-size: 3vw;
+}
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(253, 253, 253, 0.2);
+}
+.playing{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(253, 253, 253, 0.2);
+}
