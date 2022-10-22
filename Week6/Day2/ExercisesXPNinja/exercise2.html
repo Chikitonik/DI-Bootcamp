@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .loader {
+      border: 20px solid #eaf0f6;
+      border-radius: 50%;
+      border-top: 20px solid #ff7a59;
+      width: 100px;
+      height: 100px;
+      animation: spinner 3s linear infinite;
+    }
+
+    @keyframes spinner {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    #loaderText2 {
+      display: flex;
+      flex-direction: row;
+    }
+    .letter {
+      opacity: 0;
+      font-size: 24px;
+    }
+    @keyframes appearing {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    .appearing {
+      animation: appearing 3s;
+    }
+  </style>
+  <body>
+    <div class="loader"></div>
+    <div id="loaderText1">Loading</div>
+    <div id="loaderText2">
+      <div class="letter">L</div>
+      <div class="letter">O</div>
+      <div class="letter">A</div>
+      <div class="letter">D</div>
+      <div class="letter">I</div>
+      <div class="letter">N</div>
+      <div class="letter">G</div>
+    </div>
+    <script src="exercise2.js"></script>
+  </body>
+</html>

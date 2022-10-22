@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .box,
+    .box1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 10vmin;
+      height: 10vmin;
+      background-color: cornflowerblue;
+    }
+    .box1 {
+      background-color: aquamarine;
+      cursor: pointer;
+    }
+    .box {
+      animation: scaleUp 1s;
+    }
+    @keyframes scaleUp {
+      0% {
+        scale: 0;
+      }
+
+      100% {
+        scale: 1;
+      }
+    }
+  </style>
+  <body>
+    <div onclick="addBox(event)" class="box1">
+      <i class="fa fa-plus fa-3x" aria-hidden="true"></i>
+    </div>
+    <script src="exercise1.js"></script>
+  </body>
+</html>

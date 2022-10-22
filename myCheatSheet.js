@@ -1,3 +1,5 @@
+console.log("-------------String----------------------");
+String.fromCharCode(97); // returns "a"
 console.log("-------------Number----------------------");
 var stringNum = "1";
 if (!isNaN(stringNum) && !!stringNum) {
