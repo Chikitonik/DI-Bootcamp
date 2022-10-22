@@ -1,4 +1,4 @@
-console.log("-------------Number--------------");
+console.log("-------------Number----------------------");
 var stringNum = "1";
 if (!isNaN(stringNum) && !!stringNum) {
   //   //check is Number and check for empty ""
@@ -6,7 +6,7 @@ if (!isNaN(stringNum) && !!stringNum) {
   console.log(num);
 } else console.log("it's not a number");
 
-console.log("-------------Array--------------");
+console.log("-------------Array----------------------");
 console.log(...[1, 3, 4]);
 console.log([1, 3, 4]);
 console.log("String to Char array", [..."text"]);
@@ -19,7 +19,7 @@ shuffledArray = [1, 2, 3, 5, 6, 7, 8, 9, 10].sort(
   (a, b) => 0.5 - Math.random()
 );
 
-console.log("-------------loops--------------");
+console.log("-------------loops------------------------");
 xs = ["item1", "item2", "item3"];
 for (var i = 0; i < xs.length; i++) {
   console.log(xs[i]);
@@ -38,14 +38,14 @@ for (let i = 0; i < 10; i++) {
   } //A loop which will skip the step where i = 3.
   "The number is " + i + "<br>";
 }
-console.log("----------------map----------------");
+console.log("----------------map--------------------------");
 let myArray = [1, 2, 3];
 let myNewArray = myArray.map(function (x) {
   return x * 2;
 });
 console.log(myNewArray);
 let myNewArray2 = myArray.map((x) => x * 2);
-console.log("----------------try catch----------------");
+console.log("----------------try catch--------------------");
 try {
 } catch (err) {}
 console.log("-------------If else--------------");
@@ -62,7 +62,7 @@ var b = 5;
 var aB = "is a > b ?" + (a > b ? "yes" : "no");
 console.log(aB);
 
-console.log("-------------switch--------------");
+console.log("-------------switch--------------------------");
 let fruit = "Papayas";
 switch (fruit) {
   case "Oranges":
@@ -78,7 +78,7 @@ switch (fruit) {
     break;
 }
 
-console.log("-------------Objects--------------");
+console.log("-------------Objects----------------------");
 let person = {
   firstName: "John",
   lastName: "Doe",
@@ -96,7 +96,7 @@ for (const [key, value] of Object.entries(animals)) {
   console.log(`${key}: ${value}`);
 }
 
-console.log("-------------Class--------------");
+console.log("-------------Class---------------------------");
 class Car {
   constructor(name, year) {
     this.name = name;
@@ -113,17 +113,17 @@ let myCar = new Car("Ford", 2014);
 document.getElementById("demo").innerHTML =
   "My car is " + myCar.age(year) + " years old.";
 
-console.log("-------------function--------------");
+console.log("-------------function------------------------------");
 var a = function name() {};
 function name() {}
 let myFunction = (a, b) => a * b;
 hello = () => "Hello World!";
 hello = (val) => "Hello " + val;
 hello = (val) => "Hello " + val;
-console.log("-------------debugger--------------");
+console.log("-------------debugger--------------------------");
 // Such command works only when the development tools are open, otherwise the browser ignores it.
 debugger;
-console.log("-------------RegEx--------------");
+console.log("-------------RegEx---------------------------");
 let str = "Happy BirthDay";
 let patt = /birthday/i; //regular expression, i is a modifier (modifies the search to be case-insensitive).
 let result = str.match(patt);
@@ -138,7 +138,7 @@ if (result) {
 let regex = /^.+@.+\..+$/;
 console.log(regex.test("johndoe@gmail.com")); //returns true
 
-console.log("-------------RegEx Dict replace vowels--------------");
+console.log("-------------RegEx Dict replace vowels-----------------------");
 var word = "AaodsifoHUHOIDHhflsakdj";
 var dict = {
   a: 1,
@@ -156,7 +156,7 @@ var pattern = /[aeiouAEIOU]/g;
 solution = word.replace(pattern, (m) => dict[m]);
 console.log(solution);
 
-console.log("-------------Short-Circuiting--------------");
+console.log("-------------Short-Circuiting----------------------------------");
 var person1 = {
   name: "Jack",
   age: 34,
@@ -170,7 +170,7 @@ var person2 = {
 console.log(person2.age > 18 && "Driving allowed");
 // 'Driving allowed'
 
-console.log("-------------DOM--------------");
+console.log("-------------DOM--------------------------------------");
 let li = document.createElement("li");
 li.textContent = "Logout";
 li.innerHTML = '<a href="#"> Logout</a>';
@@ -190,8 +190,20 @@ function action(e) {
   e.preventDefault();
   // Many browser events have a “default action”. event.preventDefault() send a signal that those actions should be canceled.
 }
-console.log("-------------setTimeout--------------");
+console.log("-------------setTimeout-------------------------------------");
 drum.classList.add("playing");
 setTimeout(function () {
   drum.classList.remove("playing");
 }, 100);
+
+function sayHi(phrase, who) {
+  alert(phrase + ", " + who);
+}
+setTimeout(sayHi, 1000, "Hello", "John");
+console.log("-------------setInterval---------------------------------");
+var intervalId = setInterval(() => {
+  console.log("2sec passed");
+}, 2000);
+function stopInterval() {
+  clearInterval(intervalId);
+}
