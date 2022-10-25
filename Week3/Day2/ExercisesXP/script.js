@@ -119,7 +119,7 @@ console.log("1 === '1' Actual:",1 === "1");
 
 
 console.log("\nExercise 6 solution:");
-console.log("5 + '34' Prediction:",39);
+console.log("5 + '34' Prediction:","534");
 console.log("5 + '34' Actual:",5 + "34");
 console.log("5 - '4' Prediction:",1);
 console.log("5 - '4' Actual:",5 - "4");
@@ -133,13 +133,13 @@ console.log('" " + " " Prediction:',"'  '");
 console.log('" " + " " Actual:'," " + " ");
 console.log('" " + 0 Prediction:',"' 0'");
 console.log('" " + 0 Actual:'," " + 0);
-console.log('true + true Prediction:',true);
+console.log('true + true Prediction:',2);
 console.log('true + true Actual:',true + true);
-console.log('true + false Prediction:',false);
+console.log('true + false Prediction:',1);
 console.log('true + false Actual:',true + false);
-console.log('false + true Prediction:',false);
+console.log('false + true Prediction:',1);
 console.log('false + true Actual:',false + true);
-console.log('false - true Prediction:',"NaN");
+console.log('false - true Prediction:',-1);
 console.log('false - true Actual:',false - true);
 console.log('!true Prediction:',false);
 console.log('!true - true Actual:',!true);
