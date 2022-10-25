@@ -7,7 +7,7 @@
 console.log("Exercise 1 solution:");
 var favFood = "banana";
 var favMeal = "breakfast";
-console.log("I eat "+ favFood + " at every " + favMeal);
+console.log("I eat " + favFood + " at every " + favMeal);
 
 // Exercise 2 : Series///////////////////////////////////////////
 // Instructions
@@ -22,7 +22,7 @@ console.log("I eat "+ favFood + " at every " + favMeal);
 console.log("\nExercise 2 Part I solution:");
 let myWatchedSeries = ["black mirror", "money heist", "the big bang theory"];
 var myWatchedSeriesLength = myWatchedSeries.length;
-var myWatchedSeriesSentence = "I watched " + myWatchedSeriesLength +  " series";
+var myWatchedSeriesSentence = "I watched " + myWatchedSeriesLength + " series";
 console.log(myWatchedSeriesSentence + ": " + myWatchedSeries.join(", "));
 
 // Part II
@@ -50,7 +50,7 @@ console.log(myWatchedSeries);
 
 console.log("\nExercise 3 solution:");
 var tCel = 25;
-var tFar = tCel / 5 * 9 + 32;
+var tFar = (tCel / 5) * 9 + 32;
 console.log(`${tCel}°C is ${tFar}°F`);
 
 // Exercise 4 : Guess The Answers #1///////////////////////////////////////////
@@ -63,13 +63,13 @@ console.log("\nExercise 4 solution:");
 let c;
 let a = 34;
 let b = 21;
-console.log("console.log(a+b) Prediction:",55);
-console.log("console.log(a+b) Actual:",(a+b));
+console.log("console.log(a+b) Prediction:", 55);
+console.log("console.log(a+b) Actual:", a + b);
 a = 2;
-console.log("console.log(a+b) Prediction:",23);
-console.log("console.log(a+b) Actual:",(a+b));
-console.log("console.log(3 + 4 + '5') Prediction:",75);
-console.log("console.log(3 + 4 + '5') Actual:",(3 + 4 + '5'));
+console.log("console.log(a+b) Prediction:", 23);
+console.log("console.log(a+b) Actual:", a + b);
+console.log("console.log(3 + 4 + '5') Prediction:", 75);
+console.log("console.log(3 + 4 + '5') Actual:", 3 + 4 + "5");
 
 // Exercise 5 : Guess The Answers #2///////////////////////////////////////////
 // Instructions
@@ -78,38 +78,38 @@ console.log("console.log(3 + 4 + '5') Actual:",(3 + 4 + '5'));
 // Then run the expression in the console. Note the actual output in a comment and compare it with your prediction.
 
 console.log("\nExercise 5 solution:");
-console.log("typeof(15) Prediction:","number");
-console.log("typeof(15) Actual:",typeof(15));
-console.log("typeof(5.5) Prediction:","float");
-console.log("typeof(5.5) Actual:",typeof(5.5));
-console.log("typeof(NaN) Prediction:","NaN");
-console.log("typeof(NaN) Actual:",typeof(NaN));
-console.log("typeof('hello') Prediction:","string");
-console.log("typeof('hello') Actual:",typeof('hello'));
-console.log("typeof(true) Prediction:","boolean");
-console.log("typeof(true) Actual:",typeof(true));
-console.log("typeof(1 != 2) Prediction:","boolean");
-console.log("typeof(1 != 2) Actual:",typeof(1 != 2));
-console.log("'hamburger' + 's') Prediction:","hamburgers");
-console.log("'hamburger' + 's') Actual:","hamburger" + "s");
-console.log("'hamburgers' - 's') Prediction:","NaN");
-console.log("'hamburgers' - 's') Actual:","hamburgers" - "s");
-console.log("'1' + '3' Prediction:","13");
-console.log("'1' + '3') Actual:","1" + "3");
-console.log("'1' - '3' Prediction:","Error");
-console.log("'1' - '3') Actual:","1" - "3");
-console.log("'johnny' + 5 Prediction:","johnny5");
-console.log("'johnny' + 5 Actual:",'johnny' + 5);
-console.log("'johnny' - 5 Prediction:","NaN");
-console.log("'johnny' - 5 Actual:",'johnny' - 5);
-console.log("99 * 'hello' Prediction:","hello by 99 times");
-console.log("99 * 'hello' Actual:",99 * "hello");
-console.log("1 != 1' Prediction:","false");
-console.log("1 != 1 Actual:",1 != 1);
-console.log("1 == '1' Prediction:","false");
-console.log("1 == '1' Actual:",1 == "1");
-console.log("1 === '1' Prediction:","false");
-console.log("1 === '1' Actual:",1 === "1");
+console.log("typeof(15) Prediction:", "number");
+console.log("typeof(15) Actual:", typeof 15);
+console.log("typeof(5.5) Prediction:", "number");
+console.log("typeof(5.5) Actual:", typeof 5.5);
+console.log("typeof(NaN) Prediction:", "NaN");
+console.log("typeof(NaN) Actual:", typeof NaN);
+console.log("typeof('hello') Prediction:", "string");
+console.log("typeof('hello') Actual:", typeof "hello");
+console.log("typeof(true) Prediction:", "boolean");
+console.log("typeof(true) Actual:", typeof true);
+console.log("typeof(1 != 2) Prediction:", "boolean");
+console.log("typeof(1 != 2) Actual:", typeof (1 != 2));
+console.log("'hamburger' + 's') Prediction:", "hamburgers");
+console.log("'hamburger' + 's') Actual:", "hamburger" + "s");
+console.log("'hamburgers' - 's') Prediction:", "NaN");
+console.log("'hamburgers' - 's') Actual:", "hamburgers" - "s");
+console.log("'1' + '3' Prediction:", "13");
+console.log("'1' + '3') Actual:", "1" + "3");
+console.log("'1' - '3' Prediction:", "-2");
+console.log("'1' - '3') Actual:", "1" - "3");
+console.log("'johnny' + 5 Prediction:", "johnny5");
+console.log("'johnny' + 5 Actual:", "johnny" + 5);
+console.log("'johnny' - 5 Prediction:", "NaN");
+console.log("'johnny' - 5 Actual:", "johnny" - 5);
+console.log("99 * 'hello' Prediction:", "NaN");
+console.log("99 * 'hello' Actual:", 99 * "hello");
+console.log("1 != 1' Prediction:", "false");
+console.log("1 != 1 Actual:", 1 != 1);
+console.log("1 == '1' Prediction:", "true");
+console.log("1 == '1' Actual:", 1 == "1");
+console.log("1 === '1' Prediction:", "false");
+console.log("1 === '1' Actual:", 1 === "1");
 
 // Exercise 6 : Guess The Answers #3
 // Instructions
@@ -117,33 +117,32 @@ console.log("1 === '1' Actual:",1 === "1");
 // Of course, explain each prediction.
 // Then run the expression in the console. Note the actual output in a comment and compare it with your prediction.
 
-
 console.log("\nExercise 6 solution:");
-console.log("5 + '34' Prediction:",39);
-console.log("5 + '34' Actual:",5 + "34");
-console.log("5 - '4' Prediction:",1);
-console.log("5 - '4' Actual:",5 - "4");
-console.log("10 % 5 Prediction:",0);
-console.log("10 % 5 Actual:",10 % 5);
-console.log("5 % 10 Prediction:",5);
-console.log("5 % 10 Actual:",5 % 10);
-console.log('"Java" + "Script" Prediction:',"JavaScript");
-console.log('"Java" + "Script" Actual:',"Java" + "Script");
-console.log('" " + " " Prediction:',"'  '");
-console.log('" " + " " Actual:'," " + " ");
-console.log('" " + 0 Prediction:',"' 0'");
-console.log('" " + 0 Actual:'," " + 0);
-console.log('true + true Prediction:',true);
-console.log('true + true Actual:',true + true);
-console.log('true + false Prediction:',false);
-console.log('true + false Actual:',true + false);
-console.log('false + true Prediction:',false);
-console.log('false + true Actual:',false + true);
-console.log('false - true Prediction:',"NaN");
-console.log('false - true Actual:',false - true);
-console.log('!true Prediction:',false);
-console.log('!true - true Actual:',!true);
-console.log('3 - 4 Prediction:',-1);
-console.log('3 - 4 - true Actual:',3 - 4);
-console.log('"Bob" - "bill" Prediction:',"NaN");
-console.log('"Bob" - "bill" Actual:',"Bob" - "bill");
+console.log("5 + '34' Prediction:", "534");
+console.log("5 + '34' Actual:", 5 + "34");
+console.log("5 - '4' Prediction:", 1);
+console.log("5 - '4' Actual:", 5 - "4");
+console.log("10 % 5 Prediction:", 0);
+console.log("10 % 5 Actual:", 10 % 5);
+console.log("5 % 10 Prediction:", 5);
+console.log("5 % 10 Actual:", 5 % 10);
+console.log('"Java" + "Script" Prediction:', "JavaScript");
+console.log('"Java" + "Script" Actual:', "Java" + "Script");
+console.log('" " + " " Prediction:', "'  '");
+console.log('" " + " " Actual:', " " + " ");
+console.log('" " + 0 Prediction:', "' 0'");
+console.log('" " + 0 Actual:', " " + 0);
+console.log("true + true Prediction:", 2);
+console.log("true + true Actual:", true + true);
+console.log("true + false Prediction:", 1);
+console.log("true + false Actual:", true + false);
+console.log("false + true Prediction:", 1);
+console.log("false + true Actual:", false + true);
+console.log("false - true Prediction:", -1);
+console.log("false - true Actual:", false - true);
+console.log("!true Prediction:", false);
+console.log("!true - true Actual:", !true);
+console.log("3 - 4 Prediction:", -1);
+console.log("3 - 4 - true Actual:", 3 - 4);
+console.log('"Bob" - "bill" Prediction:', "NaN");
+console.log('"Bob" - "bill" Actual:', "Bob" - "bill");
