@@ -81,7 +81,7 @@ switch (fruit) {
 }
 
 console.log("-------------Objects----------------------");
-
+animals = { water: "whale", sky: "albatros" };
 for (const [key, value] of Object.entries(animals)) {
   console.log(`${key}: ${value}`);
 }
@@ -121,11 +121,11 @@ class Car {
   }
 }
 
-let date = new Date();
-let year = date.getFullYear();
-let myCar = new Car("Ford", 2014);
-document.getElementById("demo").innerHTML =
-  "My car is " + myCar.age(year) + " years old.";
+// let date = new Date();
+// let year = date.getFullYear();
+// let myCar = new Car("Ford", 2014);
+// document.getElementById("demo").innerHTML =
+//   "My car is " + myCar.age(year) + " years old.";
 
 console.log("-------------function------------------------------");
 var a = function name() {};
@@ -134,6 +134,15 @@ let myFunction = (a, b) => a * b;
 hello = () => "Hello World!";
 hello = (val) => "Hello " + val;
 hello = (val) => "Hello " + val;
+
+// Immediate Functions (Ie. Self-Invoking Functions)
+(function (name) {
+  console.log("Hello " + name);
+})("Sarah");
+// Currying
+const add = (a) => (b) => a + b;
+const result1 = add(2)(3);
+console.log(result1); // console.log 5
 console.log("-------------debugger--------------------------");
 // Such command works only when the development tools are open, otherwise the browser ignores it.
 debugger;
