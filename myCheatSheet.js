@@ -81,21 +81,33 @@ switch (fruit) {
 }
 
 console.log("-------------Objects----------------------");
-let person = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 50,
-  eyeColor: "blue",
-};
-console.log(person.firstName); // John
-console.log(person["firstName"]); // John
-person.firstName = "Sarah";
-console.log(person.firstName); // Sarah
-delete person.firstName;
-console.log(person);
 
 for (const [key, value] of Object.entries(animals)) {
   console.log(`${key}: ${value}`);
+}
+
+const menu = [
+  {
+    type: "starter",
+    name: "Houmous with Pita",
+  },
+  {
+    type: "starter",
+    name: "Vegetable Soup with Houmous peas",
+  },
+  {
+    type: "dessert",
+    name: "Chocolate Cake",
+  },
+];
+// Using this array :
+const vegetarian = ["vegetable", "houmous", "eggs", "vanilla", "potatoes"];
+// Using an array method, add a key “vegetarian” (a boolean) to the menu array.
+// The value of the key should be true if the name of the course contains at least one element from the vegetarian array.
+for (e in menu) {
+  menu[e].vegetarian = vegetarian.some((value) =>
+    menu[e].name.toLocaleLowerCase().includes(value)
+  );
 }
 
 console.log("-------------Class---------------------------");

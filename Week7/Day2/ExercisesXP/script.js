@@ -19,19 +19,21 @@ funcOne();
 // ------------- COMMENT end ----------------------------------- //
 
 //#2
-let a = 0;
-function funcTwo() {
-  a = 5;
-}
+{
+  let a = 0;
+  function funcTwo() {
+    a = 5;
+  }
 
-function funcThree() {
-  alert("inside the funcThree function ", a);
-}
+  function funcThree() {
+    alert("inside the funcThree function ", a);
+  }
 
-// #2.1 - run in the console:
-funcThree();
-funcTwo();
-funcThree();
+  // #2.1 - run in the console:
+  funcThree();
+  funcTwo();
+  funcThree();
+}
 // #2.2 What will happen if the variable is declared
 // with const instead of let ?
 // ------------- COMMENT start --------------------------------- //
@@ -53,12 +55,13 @@ funcFour();
 funcFive();
 
 //#4
-let a = 1;
-function funcSix() {
-  let a = "test";
-  alert("inside the funcSix function ", a);
+{
+  let a = 1;
+  function funcSix() {
+    let a = "test";
+    alert("inside the funcSix function ", a);
+  }
 }
-
 // #4.1 - run in the console:
 funcSix();
 // #4.2 What will happen if the variable is declared
