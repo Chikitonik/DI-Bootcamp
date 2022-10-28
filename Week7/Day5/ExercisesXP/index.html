@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="card">
+      <button
+        id="generateButton"
+        class="button"
+        onClick="quotes.getRandomQuote()"
+      >
+        Random Quote
+      </button>
+      <div id="cardQuote">
+        <div id="quote"></div>
+        <div id="author"></div>
+        <button id="like" class="button" onClick="quotes.setLike()">
+          Like it
+        </button>
+        <button
+          id="previousQuote"
+          class="button"
+          onClick="quotes.previousQuote()"
+        >
+          Previous Quote
+        </button>
+        <button id="nextQuote" class="button" onClick="quotes.nextQuote()">
+          Next
+        </button>
+      </div>
+      <div id="footer">
+        <div id="number"></div>
+        <div id="amountCharacters"></div>
+        <div id="amountCharactersWithoutSpaces"></div>
+        <div id="amountWords"></div>
+        <div id="amountLikes"></div>
+
+        <form>
+          Author filter
+          <select id="authorFilter" onchange="quotes.applyFilter()"></select>
+        </form>
+        <div class="input">
+          <input type="text" id="quoteInput" placeholder="quote text" />
+          <input type="text" id="authorInput" placeholder="author name" />
+        </div>
+        <button
+          id="addButton"
+          class="button"
+          onClick="quotes.addQuotes([[document.getElementById('quoteInput').value,
+          document.getElementById('authorInput').value]])"
+        >
+          Add this Quote to list
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

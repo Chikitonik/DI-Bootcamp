@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100&family=Roboto:wght@300&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+}
+#cardQuote {
+    width: 500px;
+    height: 450px;
+    background-color: antiquewhite;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#author {
+    font-size: 25px;
+    font-family: 'Inter Tight', sans-serif;
+    margin-top: 20px;
+}
+#generateButton {
+    margin: 30px 0 -50px 30px;
+    background-color: rgb(109, 217, 221);
+}
+#footer {
+    width: 500px;
+    height: 230px;
+    background-color:rgb(226, 222, 186);
+    padding: 20px;
+}
+#like {
+    background-color: rgb(129, 228, 134);
+    margin: 350px 0 0 30px;
+
+}
+.button {
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    position: absolute;
+
+}
+#previousQuote {
+    background-color: rgb(107, 211, 142);
+    margin: 440px 250px 0 30px;
+}
+#nextQuote {
+    background-color: rgb(107, 211, 142);
+    margin: 440px 200px 0 30px;
+}
+#quoteInput {
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+}
+#authorInput {
+    width: 100%;
+}
+#addButton {
+    width: 507px;
+}

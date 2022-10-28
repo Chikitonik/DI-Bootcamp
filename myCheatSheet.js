@@ -15,7 +15,7 @@ console.log("String to Char array", [..."text"]);
 array = ["fgh", 12, 10, , 12, 10, 10, 15, "fg"];
 var array = array.filter((value) => /\d/.test(value)); // Leave just numbers
 console.log(array);
-array = new Set(array); //unique values
+array = Array.from(new Set(array)); //unique values
 console.log(array);
 shuffledArray = [1, 2, 3, 5, 6, 7, 8, 9, 10].sort(
   (a, b) => 0.5 - Math.random()
