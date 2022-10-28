@@ -21,6 +21,10 @@ shuffledArray = [1, 2, 3, 5, 6, 7, 8, 9, 10].sort(
   (a, b) => 0.5 - Math.random()
 );
 
+const firstArr = [1, 4, 9, 16];
+const secondArr = firstArr.map((value, index) => value * 2);
+// expected output: [2, 8, 18, 32]
+
 console.log("-------------loops------------------------");
 xs = ["item1", "item2", "item3"];
 for (var i = 0; i < xs.length; i++) {
