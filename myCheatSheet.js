@@ -1,5 +1,7 @@
 console.log("-------------String----------------------");
 String.fromCharCode(97); // returns "a"
+const userEmail3 = " cannotfillemailformcorrectly@gmail.com ";
+userEmail3.replace(/\s/g, ""); // replace spaces
 console.log("-------------Number----------------------");
 var stringNum = "1";
 if (!isNaN(stringNum) && !!stringNum) {
@@ -20,11 +22,15 @@ console.log(array);
 shuffledArray = [1, 2, 3, 5, 6, 7, 8, 9, 10].sort(
   (a, b) => 0.5 - Math.random()
 );
-
+[3, 2, 1, 5].sort((a, b) => a - b); // [1, 2, 3, 5]
 const firstArr = [1, 4, 9, 16];
 const secondArr = firstArr.map((value, index) => value * 2);
 // expected output: [2, 8, 18, 32]
-
+const letters = ["x", "y", "z", "z"]; // count duplicates
+letters.reduce((acc, val) => {
+  acc[val] = (acc[val] || 0) + 1;
+  return acc;
+}, {}); // { x: 1, y: 1, z: 2 };
 console.log("-------------loops------------------------");
 xs = ["item1", "item2", "item3"];
 for (var i = 0; i < xs.length; i++) {
