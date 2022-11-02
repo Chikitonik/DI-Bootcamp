@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Tic Tac Toe Game</h1>
+    <div class="choice">
+      <div class="caption">Easy mode. Choose your sign:</div>
+      <div id="X" onclick="game.makeAChoice(event)">X</div>
+      <div id="O" onclick="game.makeAChoice(event)">O</div>
+    </div>
+    <div id="gameField" class="gameField hidden">
+      <div id="line1" class="line">
+        <div id="c1" class="cell" onclick="game.makeAMove(event)"></div>
+        <div id="c2" class="cell" onclick="game.makeAMove(event)"></div>
+        <div id="c3" class="cell" onclick="game.makeAMove(event)"></div>
+      </div>
+      <div id="line2" class="line">
+        <div id="c4" class="cell" onclick="game.makeAMove(event)"></div>
+        <div id="c5" class="cell" onclick="game.makeAMove(event)"></div>
+        <div id="c6" class="cell" onclick="game.makeAMove(event)"></div>
+      </div>
+      <div id="line3" class="line">
+        <div id="c7" class="cell" onclick="game.makeAMove(event)"></div>
+        <div id="c8" class="cell" onclick="game.makeAMove(event)"></div>
+        <div id="c9" class="cell" onclick="game.makeAMove(event)"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

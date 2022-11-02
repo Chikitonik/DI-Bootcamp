@@ -1,0 +1,41 @@
+body {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.choice {
+    display: flex;
+    flex-direction:row;
+}
+#X, #O {
+    cursor: pointer;
+    margin-left: 15px
+}
+.gameField {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.line {
+    display: flex;
+    flex-direction: row;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+#line1, #line2 {
+    border-bottom: 1px solid;
+}
+#c1, #c2, #c4, #c5, #c7, #c8 {
+    border-right: 1px solid;
+}
+.hidden {
+    visibility: hidden;
+}
