@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="got"></div>
+    <script>
+      let got = window.location.search;
+      let name = got.slice(1, got.indexOf("&"));
+      let lastName = got.slice(got.indexOf("&") + 1);
+      document.getElementById("got").innerHTML = name + "<br>" + lastName;
+    </script>
+  </body>
+</html>
