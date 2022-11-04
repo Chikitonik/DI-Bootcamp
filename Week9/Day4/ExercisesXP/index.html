@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <br />
+      Search query term or phrase. For example: hilarious
+      <input
+        type="text"
+        name="search"
+        id="searchText"
+        placeholder="search text"
+        value="sun"
+      />
+      <br />
+      <br />
+      <fieldset id="rating" style="width: 500px">
+        <legend>Content rating</legend>
+        <div>
+          <input type="radio" id="ratingG" name="rating" value="g" checked />
+          <label for="g"
+            >G: Contains images that are broadly accepted as appropriate and
+            commonly witnessed by people in a public environment</label
+          >
+        </div>
+        <div>
+          <input type="radio" id="ratingPG" name="rating" value="pg" />
+          <label for="ratingPG"
+            >PG: Contains images that are commonly witnessed in a public
+            environment, but not as broadly accepted as appropriate.</label
+          >
+        </div>
+        <div>
+          <input type="radio" id="ratingPG13" name="rating" value="pg13" />
+          <label for="ratingPG13"
+            >PG13: Contains images that are typically not seen unless sought
+            out, but still commonly witnessed.</label
+          >
+        </div>
+        <div>
+          <input type="radio" id="ratingr" name="rating" value="r" />
+          <label for="ratingr"
+            >R: Contains images that are typically not seen unless sought out
+            and could be considered alarming if witnessed.</label
+          >
+        </div>
+      </fieldset>
+      <br />
+      Limit:
+      <input
+        type="number"
+        name="limit"
+        id="limit"
+        min="1"
+        max="50"
+        value="10"
+      />
+      Start position:
+      <input
+        type="number"
+        name="offset"
+        id="offset"
+        min="1"
+        max="50"
+        value="2"
+      />
+      <input
+        type="hidden"
+        name="api_key"
+        value="hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My"
+      />
+    </form>
+    <br />
+    <button type="submit" onclick="getData()">Get data</button>
+    <div
+      id="images"
+      style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px"
+    ></div>
+    <script src="script.js"></script>
+  </body>
+</html>
