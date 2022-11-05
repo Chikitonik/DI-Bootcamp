@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .buttonDel {
+        width: 100%;
+        background-color: rgb(184, 189, 189);
+        cursor: pointer;
+        text-align: center;
+      }
+    </style>
+    <form action="" method="get">
+      <br />
+      Search query term or phrase. For example: hilarious
+      <input
+        type="text"
+        name="search"
+        id="searchText"
+        placeholder="search text"
+        value=""
+      />
+      <br />
+      <br />
+      <fieldset id="rating" style="width: 500px">
+        <legend>Content rating</legend>
+        <div>
+          <input type="radio" id="ratingG" name="rating" value="g" checked />
+          <label for="g"
+            >G: Contains images that are broadly accepted as appropriate and
+            commonly witnessed by people in a public environment</label
+          >
+        </div>
+        <div>
+          <input type="radio" id="ratingPG" name="rating" value="pg" />
+          <label for="ratingPG"
+            >PG: Contains images that are commonly witnessed in a public
+            environment, but not as broadly accepted as appropriate.</label
+          >
+        </div>
+        <div>
+          <input type="radio" id="ratingPG13" name="rating" value="pg13" />
+          <label for="ratingPG13"
+            >PG13: Contains images that are typically not seen unless sought
+            out, but still commonly witnessed.</label
+          >
+        </div>
+        <div>
+          <input type="radio" id="ratingr" name="rating" value="r" />
+          <label for="ratingr"
+            >R: Contains images that are typically not seen unless sought out
+            and could be considered alarming if witnessed.</label
+          >
+        </div>
+      </fieldset>
+    </form>
+    <br />
+    <button onclick="getData()">Get random GIF</button>
+    <button onclick="ClearData()">Clear all GIFs</button>
+    <div
+      id="images"
+      style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px"
+    ></div>
+    <script src="script.js"></script>
+  </body>
+</html>
