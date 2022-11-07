@@ -1,0 +1,64 @@
+#card-deck {
+    padding: 0;
+    margin: 0;
+}
+.hidden {
+  display: none;
+}
+.removeBorder {
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#search {
+  width: 20rem !important;
+}
+.search-dropdown-menu {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ced4da;
+  border-top: none;
+  border-radius: 0.375rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  cursor: pointer;
+  width: 20rem !important;
+  top: 45px;
+}
+.card {
+
+  width: 15rem;
+  margin: 1rem !important;
+}
+.card-body, .cardHeader {
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+}
+/* color design */
+.cardHeader {
+  background-color: #6524d4;
+  color:white;
+}
+.card-body {
+    background-color: #94d424;
+}
+li {
+    list-style: none;
+    padding-left: 1rem;
+}
+ul {
+    padding: 0;
+}
+li:hover, .btn-outline:hover {
+    background-color:#d42494;
+    color:white;
+
+}
+/* typography */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
+.card-body {
+    font-family: 'Open Sans', sans-serif;
+}
+.cardHeader, .temperature,.title {
+    font-family: 'Roboto', sans-serif;
+}

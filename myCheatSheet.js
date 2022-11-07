@@ -71,8 +71,10 @@ if (age === 18) {
 }
 var a = 10;
 var b = 5;
+var c = 0;
 var aB = "is a > b ?" + (a > b ? "yes" : "no");
 console.log(aB);
+a > b && (c = 100); // if a > c change value of c
 
 console.log("-------------switch--------------------------");
 let fruit = "Papayas";
