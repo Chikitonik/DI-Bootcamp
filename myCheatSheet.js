@@ -1,37 +1,42 @@
-console.log("-------------String----------------------");
+// #region -------------String----------------------
 String.fromCharCode(97); // returns "a"
-const userEmail3 = " cannotfillemailformcorrectly@gmail.com ";
+const userEmail3 = " cannotfille mailform correctly@gmail.com ";
 userEmail3.replace(/\s/g, ""); // replace spaces
-console.log("-------------Number----------------------");
+//#endregion
+// #region -------------Number----------------------
 var stringNum = "1";
 if (!isNaN(stringNum) && !!stringNum) {
   //   //check is Number and check for empty ""
   num = +stringNum; //convert to number
   console.log(num);
 } else console.log("it's not a number");
-
-console.log("-------------Array----------------------");
-console.log(...[1, 3, 4]);
-console.log([1, 3, 4]);
+//#endregion
+// #region -------------Array----------------------
+console.log(...[1, 3, 4]); // print "1 3 4"
 console.log("String to Char array", [..."text"]);
+
 array = ["fgh", 12, 10, , 12, 10, 10, 15, "fg"];
 var array = array.filter((value) => /\d/.test(value)); // Leave just numbers
-console.log(array);
+
 array = Array.from(new Set(array)); //unique values
-console.log(array);
+
 shuffledArray = [1, 2, 3, 5, 6, 7, 8, 9, 10].sort(
   (a, b) => 0.5 - Math.random()
-);
+); // shuffledArray
+
 [3, 2, 1, 5].sort((a, b) => a - b); // [1, 2, 3, 5]
+
 const firstArr = [1, 4, 9, 16];
 const secondArr = firstArr.map((value, index) => value * 2);
 // expected output: [2, 8, 18, 32]
+
 const letters = ["x", "y", "z", "z"]; // count duplicates
 letters.reduce((acc, val) => {
   acc[val] = (acc[val] || 0) + 1;
   return acc;
 }, {}); // { x: 1, y: 1, z: 2 };
-console.log("-------------loops------------------------");
+// #endregion
+// #region -------------loops------------------------
 xs = ["item1", "item2", "item3"];
 for (var i = 0; i < xs.length; i++) {
   console.log(xs[i]);
@@ -50,14 +55,16 @@ for (let i = 0; i < 10; i++) {
   } //A loop which will skip the step where i = 3.
   "The number is " + i + "<br>";
 }
-console.log("----------------map--------------------------");
+// #endregion
+// #region ----------------map--------------------------
 let myArray = [1, 2, 3];
 let myNewArray = myArray.map(function (x) {
   return x * 2;
 });
 console.log(myNewArray);
 let myNewArray2 = myArray.map((x) => x * 2);
-console.log("----------------try catch--------------------");
+// #endregion
+// #region ----------------try catch--------------------");
 try {
 } catch (err) {}
 console.log("-------------If else--------------");
@@ -76,7 +83,8 @@ var aB = "is a > b ?" + (a > b ? "yes" : "no");
 console.log(aB);
 a > b && (c = 100); // if a > c change value of c
 
-console.log("-------------switch--------------------------");
+// #endregion
+// #region -------------switch--------------------------");
 let fruit = "Papayas";
 switch (fruit) {
   case "Oranges":
@@ -122,7 +130,8 @@ for (e in menu) {
   );
 }
 
-console.log("-------------Class---------------------------");
+// #endregion
+// #region -------------Class---------------------------");
 class Car {
   constructor(name, year) {
     this.name = name;
@@ -139,7 +148,8 @@ class Car {
 // document.getElementById("demo").innerHTML =
 //   "My car is " + myCar.age(year) + " years old.";
 
-console.log("-------------function------------------------------");
+// #endregion
+// #region -------------function------------------------------");
 var a = function name() {};
 function name() {}
 let myFunction = (a, b) => a * b;
@@ -155,10 +165,12 @@ hello = (val) => "Hello " + val;
 const add = (a) => (b) => a + b;
 const result1 = add(2)(3);
 console.log(result1); // console.log 5
-console.log("-------------debugger--------------------------");
+// #endregion
+// #region -------------debugger--------------------------");
 // Such command works only when the development tools are open, otherwise the browser ignores it.
 debugger;
-console.log("-------------RegEx---------------------------");
+// #endregion
+// #region -------------RegEx---------------------------");
 let str = "Happy BirthDay";
 let patt = /birthday/i; //regular expression, i is a modifier (modifies the search to be case-insensitive).
 let result = str.match(patt);
@@ -173,7 +185,8 @@ if (result) {
 let regex = /^.+@.+\..+$/;
 console.log(regex.test("johndoe@gmail.com")); //returns true
 
-console.log("-------------RegEx Dict replace vowels-----------------------");
+// #endregion
+// #region -------------RegEx Dict replace vowels-----------------------");
 var word = "AaodsifoHUHOIDHhflsakdj";
 var dict = {
   a: 1,
@@ -191,7 +204,8 @@ var pattern = /[aeiouAEIOU]/g;
 solution = word.replace(pattern, (m) => dict[m]);
 console.log(solution);
 
-console.log("-------------Short-Circuiting----------------------------------");
+// #endregion
+// #region -------------Short-Circuiting----------------------------------");
 var person1 = {
   name: "Jack",
   age: 34,
@@ -205,7 +219,8 @@ var person2 = {
 console.log(person2.age > 18 && "Driving allowed");
 // 'Driving allowed'
 
-console.log("-------------DOM--------------------------------------");
+// #endregion
+// #region -------------DOM--------------------------------------");
 let li = document.createElement("li");
 li.textContent = "Logout";
 li.innerHTML = '<a href="#"> Logout</a>';
@@ -225,7 +240,8 @@ function action(e) {
   e.preventDefault();
   // Many browser events have a “default action”. event.preventDefault() send a signal that those actions should be canceled.
 }
-console.log("-------------setTimeout-------------------------------------");
+// #endregion
+// #region -------------setTimeout-------------------------------------");
 drum.classList.add("playing");
 setTimeout(function () {
   drum.classList.remove("playing");
@@ -242,3 +258,24 @@ var intervalId = setInterval(() => {
 function stopInterval() {
   clearInterval(intervalId);
 }
+// #endregion
+// #region -------------promises and fetch-------------------------
+
+const urls = [
+  "https://jsonplaceholder.typicode.com/users",
+  "https://jsonplaceholder.typicode.com/posts",
+  "https://jsonplaceholder.typicode.com/albums",
+];
+Promise.all(
+  urls.map((url) => {
+    return fetch(url).then((resp) => resp.json());
+  })
+)
+  .then((results) => {
+    console.log(results[0]);
+    console.log(results[1]);
+    console.log(results[2]);
+  })
+  .catch(() => console.log("error"));
+
+// #endregion
