@@ -260,23 +260,40 @@ function stopInterval() {
 }
 // #endregion
 // #region -------------promises and fetch-------------------------
-
+console.log("Starting ...");
+const func = () => {
+  console.log("Working ...");
+  fetch("https://api.sunrise-sunset.org/json?lat=32.0853&lng=34.7818")
+    .then((resp) => resp.json()) //return a promise
+    .then((resp) =>
+      console.log(`The hour of the sunrise in Tel Aviv is:
+            ${resp.results.sunrise}`)
+    )
+    .catch(function (error) {
+      console.log(`We got the error ${error}`);
+    });
+  console.log("Work Done ...");
+};
+func();
+////////////////
 const urls = [
   "https://jsonplaceholder.typicode.com/users",
   "https://jsonplaceholder.typicode.com/posts",
   "https://jsonplaceholder.typicode.com/albums",
 ];
-Promise.all(
-  urls.map((url) => {
-    return fetch(url).then((resp) => resp.json());
-  })
-)
-  .then((results) => {
-    console.log(results[0]);
-    console.log(results[1]);
-    console.log(results[2]);
-  })
-  .catch(() => console.log("error"));
+const getData = async function () {
+  try {
+    const [users, posts, albums] = await Promise.all(
+      urls.map((url) => fetch(url).then((resp) => resp.json()))
+    );
+    console.log("users :>> ", users);
+    console.log("posts :>> ", posts);
+    console.log("albums :>> ", albums);
+  } catch (err) {
+    console.log("Oops".err);
+  }
+};
+getData();
 ////////////////
 const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
@@ -291,4 +308,8 @@ promise
   .catch((value) => {
     console.log(value);
   });
+// #endregion
+// #region -------------async await---------------------
+a = async () => "Hello";
+console.log(await a());
 // #endregion
