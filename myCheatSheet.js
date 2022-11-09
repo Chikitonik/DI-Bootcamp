@@ -277,5 +277,18 @@ Promise.all(
     console.log(results[2]);
   })
   .catch(() => console.log("error"));
-
+////////////////
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("success");
+    reject("Ooops something went wrong");
+  }, 4000);
+});
+promise
+  .then((value) => {
+    console.log(value);
+  })
+  .catch((value) => {
+    console.log(value);
+  });
 // #endregion
