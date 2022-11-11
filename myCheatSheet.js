@@ -275,26 +275,48 @@ const func = () => {
   console.log("Work Done ...");
 };
 func();
-////////////////
-const urls = [
-  "https://jsonplaceholder.typicode.com/users",
-  "https://jsonplaceholder.typicode.com/posts",
-  "https://jsonplaceholder.typicode.com/albums",
-];
-const getData = async function () {
-  try {
-    const [users, posts, albums] = await Promise.all(
-      urls.map((url) => fetch(url).then((resp) => resp.json()))
-    );
-    console.log("users :>> ", users);
-    console.log("posts :>> ", posts);
-    console.log("albums :>> ", albums);
-  } catch (err) {
-    console.log("Oops".err);
-  }
-};
-getData();
-////////////////
+/////////////////////////////////////////
+// New York
+// Latitude: 40.730610
+// Longitude: -73.935242
+const url = "https://api.sunrise-sunset.org/json?";
+var city1;
+async function getSunrise() {
+  city1 = await fetch(`${url}lat=${40.73061}&lng=${-73.935242}`).then((res) =>
+    res.json().then((data) => data)
+  );
+  console.log("city1 :>> ", city1.results);
+}
+getSunrise();
+//////
+async function getSunrise(event) {
+  event.preventDefault();
+  const [city1, city2] = await Promise.all(
+    [
+      [lat1.value, lon1.value],
+      [lat2.value, lon2.value],
+    ].map((cityCoord) => {
+      return fetch(`${url}lat=${cityCoord[0]}&lng=${cityCoord[0]}`).then(
+        (res) => res.json().then((data) => data)
+      );
+    })
+  );
+  console.log("city1 :>> ", city1.results);
+  console.log("city1 :>> ", city2.results);
+}
+////////////////////////////////////////
+const promise1 = Promise.resolve(3);
+// const promise1 = Promise.reject(3);
+const promise2 = 42;
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 3000, "foo");
+});
+
+Promise.all([promise1, promise2, promise3])
+  .then((response) => console.log(response))
+  .catch((error) => console.log("error :>> ", error));
+///////////////////////////////////////
+
 const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("success");

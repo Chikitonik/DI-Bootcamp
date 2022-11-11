@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      First city <br />
+      latitude
+      <input type="number" name="" id="lat1" value="48.864716" /> longitude
+      <input type="number" name="" id="lon1" value="2.349014" /><br />
+      <br />
+      Second city <br />
+      latitude
+      <input type="number" name="" id="lat2" value="40.730610" /> longitude
+      <input type="number" name="" id="lon2" value="-73.935242" /><br /><br />
+      <div style="color: grey">
+        For example: <br />Paris <br />Latitude: 48.864716 <br />Longitude:
+        2.349014 <br />New York<br />
+        Latitude: 40.730610<br />
+        Longitude: -73.935242
+      </div>
+      <br />
+      <button type="submit" onclick="getSunrise(event)">
+        Find the hour of sunrise
+      </button>
+      <br />
+      <br />
+      <div id="hours"></div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
