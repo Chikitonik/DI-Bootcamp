@@ -1,0 +1,5 @@
+-- Count how many actors are in the table.
+-- SELECT count (*) FROM actors
+--  Try to add a new actor with some blank fields. What do you think the outcome will be ?
+-- INSERT INTO students (first_name, last_name) values ('Test')
+-- ---INSERT has more target columns than expressions
