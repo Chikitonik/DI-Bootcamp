@@ -335,3 +335,9 @@ promise
 a = async () => "Hello";
 console.log(await a());
 // #endregion
+for (word of (str.split(' ')){
+  for(let i = word.length-1; i>=0; i--)
+  {
+  res += str[i]
+  }
+}
