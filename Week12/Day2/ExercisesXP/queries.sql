@@ -1,0 +1,105 @@
+-- 🌟 Exercise 1: DVD Rental
+-- Instructions
+-- Get a list of all film languages.
+-- SELECT name from language where language_id in (select language_id FROM film)
+-- Get a list of all films joined with their languages – select the following details :
+-- film title, description, and language name. Try your query with different joins:
+-- SELECT title, description, name FROM film
+-- LEFT JOIN language ON language.language_id = film.language_id
+-- -- Get all films, even if they don’t have languages.
+-- SELECT * FROM film
+-- -- Get all languages, even if there are no films in those languages.
+-- SELECT NAME from language
+-- Create a new table called new_film with the following columns : id, name. Add some new films to the table.
+-- CREATE TABLE new_film(
+--     id serial unique,
+--     name text
+-- )
+-- INSERT INTO new_film (name) values 
+--     ('Avatar'),
+--     ('Umbrella academy'),
+--     ('Foundation')
+-- Create a new table called customer_review, which will contain film reviews that customers will make.
+-- Think about the DELETE constraint: if a film is deleted, its review should be automatically deleted.
+-- It should have the following columns:
+-- review_id – a primary key, non null, auto-increment.
+-- film_id – references the new_film table. The film that is being reviewed.
+-- language_id – references the language table. What language the review is in.
+-- title – the title of the review.
+-- score – the rating of the review (1-10).
+-- review_text – the text of the review. No limit on the length.
+-- last_update – when the review was last updated.
+-- CREATE TABLE customer_review(
+--     review_id serial primary key not null,
+--     film_id integer references new_film(id) on delete cascade,
+--     language_id integer references language(language_id) on delete no action,
+--     title text,
+--     score NUMERIC(10),
+--     review_text text,
+--     last_update date
+-- )
+-- Add 2 movie reviews. Make sure you link them to valid objects in the other tables.
+-- INSERT INTO customer_review (film_id, language_id, title, score, review_text, last_update) values 
+--     (1, 1, 'super review # 1', 10, 'It was awesome', '2010-01-01'),
+--     (2, 1, 'my review', 7, 'interesting', '2020-10-10'),
+--     (3, 1, 'super review # 2', 9, 'cool story', '2006-06-06')
+-- Delete a film that has a review from the new_film table, what happens to the customer_review table?
+-- delete from new_film where id = 2
+-- select * from customer_review -- review also was deleted
+-- 🌟 Exercise 2 : DVD Rental
+-- Instructions
+-- Use UPDATE to change the language of some films. Make sure that you use valid languages.
+-- UPDATE film SET language_id = 2 where film_id = 133
+-- UPDATE film SET language_id = 6 where film_id = 25
+-- UPDATE film SET language_id = 4 where film_id = 60
+-- Which foreign keys (references) are defined for the customer table? How does this affect the way in which
+--  we INSERT into the customer table?
+-- Answer: the foreign key is address_id. We can insert just the values which is present in address_id of table address
+-- We created a new table called customer_review. Drop this table. Is this an easy step, or does it need extra checking?
+-- DROP TABLE customer_review
+-- Answer: extra checking does not needed because other tables has no foreign keys which is dependent of customer_review
+-- Find out how many rentals are still outstanding (ie. have not been returned to the store yet).
+-- select count(*) from rental where return_date is null
+-- Find the 30 most expensive movies which are outstanding (ie. have not been returned to the store yet)
+-- select film.title, film.rental_rate from film
+-- INNER JOIN inventory on inventory.film_id = film.film_id
+-- INNER JOIN rental on  rental.inventory_id = inventory.inventory_id where return_date is null
+-- ORDER BY rental_rate DESC LIMIT 30
+-- Your friend is at the store, and decides to rent a movie. He knows he wants to see 4 movies,
+-- but he can’t remember their names. Can you help him find which movies he wants to rent?
+-- The 1st film : The film is about a sumo wrestler, and one of the actors is Penelope Monroe.
+-- SELECT film.title, film.description, actor.first_name, actor.last_name FROM film 
+-- left join film_actor on film.film_id = film_actor.film_id
+-- left join actor on actor.actor_id = film_actor.actor_id 
+-- WHERE lower(film.description) like '%sumo%wrestler%'
+-- and lower(actor.first_name) like '%penelope%'
+-- and lower(actor.last_name) like '%monroe%'
+-- The 2nd film : A short documentary (less than 1 hour long), rated “R”.
+-- SELECT * from film 
+-- left join film_category on film_category.film_id = film.film_id
+-- LEFT JOIN category on film_category.category_id = category.category_id
+-- WHERE film.rating = 'R' and film.length < 60
+-- and category.name = 'Documentary'
+-- The 3rd film : A film that his friend Matthew Mahan rented. He paid over $4.00 for the rental,
+-- and he returned it between the 28th of July and the 1st of August, 2005.
+-- WITH friend AS (SELECT customer_id from customer
+--         where first_name = 'Matthew' AND last_name = 'Mahan'),
+--     four_dollars_rent as (select film_id, title, description from film
+--         where rental_rate > 4),
+--     film_id_returned_summer_by_friend as (select inventory.film_id from rental
+--         inner join inventory on inventory.inventory_id = rental.inventory_id
+--         where rental.return_date between '2005.07.28' and '2005.08.01'
+--         and customer_id in (SELECT * from friend))
+-- SELECT * from four_dollars_rent where film_id in (select * from film_id_returned_summer_by_friend)
+-- The 4th film : His friend Matthew Mahan watched this film, as well. It had the word “boat”
+-- in the title or description, and it looked like it was a very expensive DVD to replace.
+-- WITH friend AS (SELECT customer_id from customer
+--         where first_name = 'Matthew' AND last_name = 'Mahan'),
+--     boat_in_text as (select film_id, rental_rate, title, description from film
+--         where lower(description) like '%boat%'
+--         or lower(title) like '%boat%'),
+--     film_id_watched_by_friend as (select inventory.film_id from rental
+--         inner join inventory on inventory.inventory_id = rental.inventory_id
+--         where customer_id in (SELECT * from friend))
+-- SELECT * FROM boat_in_text WHERE film_id in (SELECT * from film_id_watched_by_friend)
+-- ORDER BY rental_rate DESC
