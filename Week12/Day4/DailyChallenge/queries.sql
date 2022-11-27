@@ -1,0 +1,57 @@
+-- 1. Create a table called product_orders and a table called items. You decide which fields should
+-- be in each table, although make sure the items table has a column called price.
+-- 2. There should be a one to many relationship between the product_orders table and the items table.
+-- An order can have many items, but an item can belong to only one order.
+-- CREATE TABLE items(
+--     item_id serial primary key,
+--     order_id integer references items(item_id) on delete cascade,
+--     title varchar(100),
+--     description text,
+--     weight numeric,
+--     price numeric
+-- )
+-- CREATE TABLE product_orders(
+--     order_id integer,
+--     shipping_date DATE,
+--     item_id integer references items(item_id) on delete restrict
+-- )
+-- insert into items(order_id, title, price) values
+-- (1, 'item1', 100),
+-- (1, 'item2', 20),
+-- (2, 'item3', 50)
+-- insert into product_orders(order_id, shipping_date,item_id) values
+-- (1, '2022-12-12', 1),
+-- (1, '2022-12-12', 2),
+-- (2, '2022-12-15', 3)
+-- 3. Create a function that returns the total price for a given order.
+-- CREATE FUNCTION get_order_sum(order_number integer)
+-- RETURNS numeric AS $order_sum$
+-- BEGIN
+--    RETURN(select sum(price) from items where order_id = order_number);
+-- END;
+-- $order_sum$ LANGUAGE plpgsql;
+-- SELECT * FROM get_order_sum(1);
+-- 4. Bonus :
+-- Create a table called users.
+-- There should be a one to many relationship between the users table and the
+-- product_orders table.
+-- Create a function that returns the total price for a given order of a given user.
+-- CREATE TABLE users(
+--     order_id integer,
+--     user_login varchar(100)
+-- )
+-- insert into users(order_id, user_login) values
+-- (1, 'tom'),
+-- (2, 'tom')
+-- CREATE FUNCTION get_order_sum_user(order_number integer, login_p varchar(100))
+-- RETURNS numeric AS $order_sum_user$
+-- BEGIN
+--    RETURN(
+--     select sum(price) from items
+--     inner join users on users.order_id = items.order_id
+--     where items.order_id = order_number
+--     and users.user_login = login_p
+--     );
+-- END;
+-- $order_sum_user$ LANGUAGE plpgsql;
+-- SELECT * FROM get_order_sum_user(2, 'tom');
