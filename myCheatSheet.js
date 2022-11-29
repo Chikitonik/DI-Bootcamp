@@ -335,3 +335,7 @@ promise
 a = async () => "Hello";
 console.log(await a());
 // #endregion
+// #region -------------local storage---------------------
+const tasksArray = JSON.parse(localStorage.getItem("tasksArray") || "[]");
+localStorage.setItem("tasksArray", JSON.stringify(tasksArray));
+// #endregion

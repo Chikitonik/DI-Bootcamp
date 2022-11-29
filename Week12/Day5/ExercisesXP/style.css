@@ -1,0 +1,13 @@
+body {
+    padding: 5px;
+}
+.hidden {
+    display: none;
+}
+.del{
+    cursor: pointer;
+}
+.modal-content {
+    padding: 10px;
+
+}
