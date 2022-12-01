@@ -166,11 +166,33 @@ const add = (a) => (b) => a + b;
 const result1 = add(2)(3);
 console.log(result1); // console.log 5
 // #endregion
+// #region -------------Date--------------------------");
+const today = new Date();
+const newYear = new Date(new Date().getFullYear() + 1, 0, 1);
+const diffMs = newYear - today; // milliseconds between now & newYear
+const diffDays = Math.floor(diffMs / 86400000); // days
+const diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
+const diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); // minutes
+console.log(
+  diffDays +
+    " days, " +
+    diffHrs +
+    " hours, " +
+    diffMins +
+    " minutes until newYear =)"
+);
+
+// #endregion
 // #region -------------debugger--------------------------");
 // Such command works only when the development tools are open, otherwise the browser ignores it.
 debugger;
 // #endregion
 // #region -------------RegEx---------------------------");
+let str1 = "k5k3q2g5z6x9bn";
+// Excepted output : 532569
+const regex1 = /\d/g;
+console.log("output :>> ", str1.match(regex1).join(""));
+
 let str = "Happy BirthDay";
 let patt = /birthday/i; //regular expression, i is a modifier (modifies the search to be case-insensitive).
 let result = str.match(patt);
