@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSS Facts Feed</title>
+    <%- include('partials/head') %>
+  </head>
+  <body>
+        
+      </span><!-- for prettier-ignore -->
+    <!-- header -->
+    <%- include('partials/header') %>
+    <!-- body -->
+  <div class="ms-3 mt-2">
+    <div class="mb-5 ms-5 mt-3 h3" >Welcome to fun facts site</div>
+    <% if(feed.items.length > 0) feed.items.forEach((item) => { %>
+      <a class="h3" href=<%= item.link %>><%= item.title %></a>
+      <p><%= item.pubDate %></p>
+      <p>Categories: <b><%= item.categories %></b></p>
+      <p><%= item.contentSnippet %></p>
+      <hr />
+      <% }); %>
+  </div>
+    <!-- footer -->
+    <%- include('partials/footer') %>
+  </body>
+</html>

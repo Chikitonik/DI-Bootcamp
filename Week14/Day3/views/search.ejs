@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSS Facts Feed</title>
+    <%- include('partials/head') %>
+  </head>
+  <body class="d-flex flex-column">
+</span><!-- for prettier-ignore -->
+    <!-- header -->
+    <%- include('partials/header') %>
+    <!-- body -->
+    <div class="row ms-2 mt-4">
+      <div class="col-4">
+        <div class="h4">Search title</div>
+        <form action="/search" method="post">
+          <input
+            name="title"
+            type="text"
+            class="form-control"
+            id="title"
+            placeholder="title"
+          />
+          <input class="btn btn-light" type="submit" value="search" />
+        </form>
+        <div class="h4 mt-2">Search category</div>
+        <form action="/search" method="post">
+          <select class="form-select" name="category">
+            <option selected=""></option>
+            <% categoriesAll.forEach((category) => { %>
+            <option><%= category %></option>
+            <% }); %>
+          </select>
+          <input class="btn btn-light" type="submit" value="search" />
+        </form>
+      </div>
+      <div class="col-8">
+        <div class="h4">Posts</div>
+        <% feedFiltered.forEach((item) => { %>
+            <a class="h3" href=<%= item.link %>><%= item.title %></a>
+            <p><%= item.pubDate %></p>
+            <p>Categories: <b><%= item.categories %></b></p>
+            <p><%= item.contentSnippet %></p>
+            <hr />
+            <% }); %>
+      </div>
+    </div>
+    <!-- footer -->
+    <%- include('partials/footer') %>
+  </body>
+</html>
