@@ -1,0 +1,21 @@
+body, html {
+    margin: 0;
+}
+
+.header {
+    color:white;
+    background-color: black;
+    font-size: 48px;
+    padding: 0 0 10px 10px;
+    font-weight: bold;
+}
+
+.form {
+    background-color:#b894f6;
+    padding: 10px 0 10px 10px;
+}
+
+.entered-information{
+    background-color:#d2f694;
+    padding: 10px 0 10px 10px;
+}
