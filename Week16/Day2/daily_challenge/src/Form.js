@@ -7,8 +7,6 @@ class Form extends React.Component {
     this.state = props;
   }
   handleChange = (event) => {
-    // event.preventDefault();
-    // console.log("event.target", event.target);
     const name = event.target.name;
     const value = event.target.value;
     this.setState({ [name]: value });
@@ -22,9 +20,19 @@ class Form extends React.Component {
       <>
         <div className="header">Sample form</div>
         <form className="form" onChange={this.handleChange}>
-          <input type="text" name="firstName" placeholder="First Name"></input>
+          <input
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            value={this.state.firstName} //this is the standard
+          ></input>
           <br />
-          <input type="text" name="lastName" placeholder="Last Name"></input>
+          <input
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
+            value={this.state.lastName}
+          ></input>
           <br />
           <input type="number" name="age" placeholder="Age"></input>
           <br />
