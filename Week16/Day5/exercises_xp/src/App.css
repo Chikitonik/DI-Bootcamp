@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
+body {
+    background-color: #e7e7e7;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+
+}
+
+.taskLineFromDB:hover {
+    text-decoration: line-through;
+    cursor: pointer
+  }
+  h1, p {
+    color: #0c3ff5;
+font-family: 'Roboto', sans-serif;
+
+  }
+
+.container {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+li {
+    list-style: none;
+    background-color: white;
+    width: 800px;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid rgb(219, 219, 219);
+font-family: 'Open Sans', sans-serif;
+
+}
+input {
+    width: 800px;
+margin-left:40px;
+    background-color: #e7e7e7;
+padding: 5px 10px 5px 10px;
+border:0;
+border-bottom: 2px solid rgb(219, 219, 219);
+}
+textarea:focus, input:focus{
+    outline: none;
+}
