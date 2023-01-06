@@ -99,8 +99,16 @@ switch (fruit) {
     // expected output: "Mangoes and papayas are $2.79 a pound."
     break;
 }
+// #endregion
+// #region -------------Objects--------------------------");
+// filter
+let objData = [
+  { name: "Rock", id: "1", alive: true },
+  { name: "John", id: "2", alive: false },
+  { name: "David", id: "3", alive: false },
+];
+let filterObj = objData.filter((item) => item.id < 3);
 
-console.log("-------------Objects----------------------");
 animals = { water: "whale", sky: "albatros" };
 for (const [key, value] of Object.entries(animals)) {
   console.log(`${key}: ${value}`);

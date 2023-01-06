@@ -1,0 +1,34 @@
+body{
+    background-color:#e7e7e7
+}
+.cardDesk {
+    margin-top:10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.card {
+    border: 1px solid;
+    width: 200px;
+    height: 300px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 3px 5px #ec979d;
+    background-color:white
+
+}
+.card:hover {
+    box-shadow: 5px 5px 5px #e7444f;
+
+}
+.image {
+    margin: 10px 0 10px 0;
+    width: 180px;
+    height: 200px;
+    background-size: cover;                     
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+}
