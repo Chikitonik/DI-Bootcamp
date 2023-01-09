@@ -1,14 +1,14 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
-import { Provider } from "react-redux";
-import { store } from "./app/store";
+import ReactDOM from "react-dom/client";
 import App from "./App";
+import { Provider } from "react-redux";
+// store import
+import { store } from "./app/store";
 
-const container = document.getElementById("root");
-const root = createRoot(container);
-
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    {/* wrapping and sending store to the App. Always only 1 App */}
     <Provider store={store}>
       <App />
     </Provider>

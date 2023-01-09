@@ -1,0 +1,15 @@
+.form {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 200px
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.rowElement {
+    border: 1px solid;
+    width: 100px;
+    word-wrap: break-word;
+}
