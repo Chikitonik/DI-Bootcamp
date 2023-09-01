@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Cards</title>
+    <style>
+      /* Add your CSS styling here */
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 250px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        text-align: center; /* Center-align text */
+      }
+
+      .card img {
+        max-width: 100%;
+        height: 200px; /* Set the desired fixed height for images */
+      }
+
+      h2 {
+        margin-bottom: 10px; /* Decrease space below headings */
+      }
+      p {
+        margin: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Card</h1>
+    <div class="card-container">
+      <div class="card">
+        <h2>{{ card.name }}</h2>
+        <p><strong>Species:</strong> {{ card.species }}</p>
+        <p><strong>House:</strong> {{ card.house }}</p>
+        {% if card.image and card.image != "" %}
+        <img src="{{ card.image }}" alt="{{ card.name }}" />
+        {% else %}
+        <img src="{% static 'placeholder.jpg' %}" alt="Empty Image" />
+        {% endif %}
+        <p><strong>Date of Birth:</strong> {{ card.date_of_birth }}</p>
+        <p><strong>Patronus:</strong> {{ card.patronus }}</p>
+        <p><strong>Price:</strong> {{ card.price }}</p>
+        <p><strong>XP Points:</strong> {{ card.xp_points }}</p>
+        <p><strong>Current Owner:</strong> {{ card.current_owner }}</p>
+        <p><strong>Previous Owner:</strong> {{ card.previous_owner }}</p>
+      </div>
+    </div>
+  </body>
+</html>

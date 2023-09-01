@@ -1,0 +1,8 @@
+because of lack of time...
+
+implemented
+- Design for card detail page, cards, user
+- views display_all_cards, display_one_card, user_profile, buy_one_card, sell_one_card
+
+not implemented
+- Design for buying/selling cards, and managing favorites
