@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add Todo</title>
+  </head>
+  <body>
+    <h1>Add Todo</h1>
+    <form method="POST">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Add Todo</button>
+    </form>
+
+    <hr />
+
+    <h2>Todo List</h2>
+    <ul>
+      {% for todo in todos %}
+      <li>
+        <strong>{{ todo.title }}</strong>
+        <p>Category: {{ todo.category }}</p>
+        <p>Details: {{ todo.details }}</p>
+        <p>Created: {{ todo.date_creation }}</p>
+        {% if todo.deadline_date %}
+        <p>Deadline: {{ todo.deadline_date }}</p>
+        {% endif %} {% if todo.has_been_done %}
+        <p>Status: Done</p>
+        <p>Completed: {{ todo.date_completion }}</p>
+        {% else %}
+        <p>Status: Not Done</p>
+        {% endif %}
+      </li>
+      {% empty %}
+      <p>No todos available.</p>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
