@@ -1,0 +1,18 @@
+<!-- app_name/templates/app_name/positive_likes_gifs.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GIFs with Positive Likes</title>
+  </head>
+  <body>
+    <h1>GIFs with Positive Likes</h1>
+
+    <ul>
+      {% for gif in gifs %}
+      <li>{{ gif.title }} - Likes: {{ gif.likes }}</li>
+      {% empty %}
+      <p>No GIFs with positive likes found.</p>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+<form method="post" action="{% url 'increment_likes' gif.id %}">
+  {% csrf_token %}
+  <button type="submit" style="background-color: green">+1 Like</button>
+</form>

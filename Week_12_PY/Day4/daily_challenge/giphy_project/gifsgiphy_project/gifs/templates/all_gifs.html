@@ -1,0 +1,37 @@
+<!-- app_name/templates/app_name/homepage.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homepage</title>
+  </head>
+  <body>
+    <h1>Welcome to the GIF Gallery</h1>
+
+    <form method="get">
+      {{ search_form.as_p }}
+      <button type="submit">Search</button>
+    </form>
+
+    <h2>GIFs</h2>
+    <ul>
+      {% for gif in gifs %}
+      <li>{{ gif.title }}</li>
+      <img src="{{ gif.url }}" alt="{{ gif.title }}" />
+      <p>Uploader: {{ gif.uploader_name }}</p>
+      <p>Categories: {{ gif.categories.all|join:', ' }}</p>
+      <p>Created at: {{ gif.created_at }}</p>
+      <p>Likes: {{ gif.likes }}</p>
+      <form method="post" action="{% url 'increment_likes' gif.id %}">
+        {% csrf_token %}
+        <button type="submit" style="background-color: green">+1 Like</button>
+      </form>
+      <form method="post" action="{% url 'decrement_likes' gif.id %}">
+        {% csrf_token %}
+        <button type="submit" style="background-color: red">-1 Like</button>
+      </form>
+      {% empty %}
+      <p>No GIFs found.</p>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
