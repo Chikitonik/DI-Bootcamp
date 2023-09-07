@@ -1,0 +1,36 @@
+{% extends 'partials/base.html' %} {% block content %}
+<h2>Welcome to the Film Catalog</h2>
+<div class="row">
+  {% for film in films %}
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">{{ film.title }}</h5>
+        <p class="card-text">Release Date: {{ film.formatted_release_date }}</p>
+        <p class="card-text">
+          Directors: {% for director in film.directors %} {% comment %}
+          ===================================================== {% endcomment %}
+          {{ director.first_name}} {% comment %}
+          ===================================================== {% endcomment %}
+          {{ director.last_name }} {% if not forloop.last %}, {% comment %}
+          ===================================================== {% endcomment %}
+          {% endif %} {% endfor %}
+        </p>
+        <p class="card-text">Reviews:</p>
+        <ul>
+          {% for review in film.review_set.all %}
+          <li>
+            <strong>Rating:</strong> {{ review.rating }} stars<br />
+            <strong>Review:</strong> {{ review.review_text }}<br />
+            <strong>Date:</strong> {{ review.review_date|date:"F d, Y H:i A" }}
+          </li>
+          {% empty %}
+          <li>No reviews yet.</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
