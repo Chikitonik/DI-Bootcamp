@@ -1,0 +1,7 @@
+{% extends 'partials/base.html' %} {% block content %}
+<h2>User Profile</h2>
+{% include 'navbar.html' %}
+<p>Username: {{ user.username }}</p>
+<p>First Name: {{ user.first_name }}</p>
+<p>Last Name: {{ user.last_name }}</p>
+{% endblock %}
