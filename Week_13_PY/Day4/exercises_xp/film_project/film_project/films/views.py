@@ -6,6 +6,7 @@ from .forms import FilmForm, DirectorForm, ReviewForm
 from django.core.exceptions import PermissionDenied
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class HomePageView(ListView):
@@ -45,8 +46,8 @@ class DirectorCreateView(CreateView):
 
 
 @method_decorator(login_required, name='dispatch')
-class ReviewCreateView(CreateView):
+class ReviewCreateView(LoginRequiredMixin, CreateView):
     model = Review
     form_class = ReviewForm
-    template_name = 'review/addReview.html'
-    success_url = reverse_lazy('homepage')
+    template_name = "review/addReview.html"
+    success_url = reverse_lazy("homepage")

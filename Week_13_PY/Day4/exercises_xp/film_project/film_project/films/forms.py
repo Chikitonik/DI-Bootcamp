@@ -17,7 +17,11 @@ class DirectorForm(forms.ModelForm):
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
-        fields = ['film', 'review_text', 'rating']
-        widgets = {
-            'rating': forms.RadioSelect(choices=Review.RATING_CHOICES),
-        }
+        fields = ["rating", "review_text"]
+
+    def __init__(self, *args, **kwargs):
+        user = kwargs.pop("user", None)
+        super().__init__(*args, **kwargs)
+        if user:
+            self.fields["review_author"].initial = user
+            self.fields["review_author"].widget = forms.HiddenInput()

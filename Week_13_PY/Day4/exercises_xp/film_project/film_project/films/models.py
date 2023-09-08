@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth import get_user_model
 
 
 class Country(models.Model):
@@ -39,12 +40,12 @@ class Film(models.Model):
 
 
 class Review(models.Model):
-    RATING_CHOICES = [(1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5')]
-
+    review_author = models.ForeignKey(
+        get_user_model(), on_delete=models.CASCADE)
     film = models.ForeignKey(Film, on_delete=models.CASCADE)
+    rating = models.PositiveIntegerField()
     review_text = models.TextField()
-    rating = models.IntegerField(choices=RATING_CHOICES)
-    review_date = models.DateTimeField(auto_now_add=True)
+    review_date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return f"Review for {self.film.title} - {self.rating} stars"
+        return f"Review by {self.review_author.email} for {self.film.title}"

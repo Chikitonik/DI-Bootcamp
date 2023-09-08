@@ -25,6 +25,7 @@
             <strong>Rating:</strong> {{ review.rating }} stars<br />
             <strong>Review:</strong> {{ review.review_text }}<br />
             <strong>Date:</strong> {{ review.review_date|date:"F d, Y H:i A" }}
+            <strong>Author:</strong>{{ review.review_author.email }}
           </li>
           {% empty %}
           <li>No reviews yet.</li>
