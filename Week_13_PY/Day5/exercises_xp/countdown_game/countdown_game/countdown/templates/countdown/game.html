@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Countdown Game</title>
+  </head>
+  <body>
+    <h1>Countdown Game</h1>
+
+    <h2>Shuffled Word</h2>
+    <p>{{ shuffled_word }}</p>
+
+    <h2>Enter Your Guess</h2>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <input type="hidden" name="shuffled_word" value="{{ shuffled_word }}" />
+      <button type="submit">Submit Guess</button>
+    </form>
+  </body>
+</html>
