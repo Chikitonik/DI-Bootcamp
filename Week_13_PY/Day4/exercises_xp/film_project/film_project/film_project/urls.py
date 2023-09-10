@@ -16,17 +16,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from films.views import HomePageView, FilmCreateView, DirectorCreateView, ReviewCreateView
-from accounts.views import login, logout_view, profile, signup
+from films.views import HomePageView, FilmCreateView, DirectorCreateView, ReviewCreateView, FilmDeleteView, FavoriteFilmView, FilmDetailView
+from accounts.views import login_view, logout_view, profile_view, signup_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomePageView.as_view(), name='homepage'),
+    path('homepage', HomePageView.as_view(), name='homepage'),
     path('addFilm/', FilmCreateView.as_view(), name='addFilm'),
     path('addDirector/', DirectorCreateView.as_view(), name='addDirector'),
-    path('addReview/', ReviewCreateView.as_view(), name='addReview'),
-    path('signup/', signup, name='signup'),
-    path('login/', login, name='login'),
+    path('addReview/<int:pk>/', ReviewCreateView.as_view(), name='addReview'),
+    path('signup/', signup_view, name='signup'),
+    path('login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
-    path('profile/<int:user_id>/', profile, name='profile'),
+    path('profile/<int:user_id>/', profile_view, name='profile'),
+    path('delete_film/<int:pk>/', FilmDeleteView.as_view(), name='deleteFilm'),
+    path('favoriteFilm/<int:film_id>/',
+         FavoriteFilmView.as_view(), name='favoriteFilm'),
+    path('film/<int:pk>/', FilmDetailView.as_view(), name='filmDetail'),
+    # path('favoriteFilm/<int:pk>/', favorite_film, name='favoriteFilm'),
 ]

@@ -32,6 +32,33 @@
           {% endfor %}
         </ul>
       </div>
+      <!-- Add Review button -->
+      <form method="post" action="{% url 'addReview' film.pk %}">
+        {% csrf_token %}
+        <input type="hidden" name="film_id" value="{{ film.pk }}" />
+        <button type="submit" class="btn btn-success">Add review</button>
+      </form>
+      <!-- Add the delete button -->
+      {% if user.is_superuser %}
+      <form method="post" action="{% url 'deleteFilm' film.pk %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
+      {% endif %}
+      <!-- Add or remove from favorites button -->
+      <form method="post" action="{% url 'favoriteFilm' film.pk %}">
+        {% csrf_token %} {% if film in user.favorite_films.all %}
+        <button type="submit" class="btn btn-danger">
+          Remove from Favorites
+        </button>
+        {% else %}
+        <button type="submit" class="btn btn-primary">Add to Favorites</button>
+        {% endif %}
+      </form>
+      <!-- Add a button to view the film's details -->
+      <a href="{% url 'filmDetail' film.pk %}" class="btn btn-primary"
+        >View Details</a
+      >
     </div>
   </div>
   {% endfor %} {% else %}

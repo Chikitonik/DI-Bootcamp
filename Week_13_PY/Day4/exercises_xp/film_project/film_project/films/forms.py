@@ -15,6 +15,9 @@ class DirectorForm(forms.ModelForm):
 
 
 class ReviewForm(forms.ModelForm):
+    film_id = forms.ModelChoiceField(
+        queryset=Film.objects.all(), widget=forms.HiddenInput())
+
     class Meta:
         model = Review
         fields = ["rating", "review_text"]

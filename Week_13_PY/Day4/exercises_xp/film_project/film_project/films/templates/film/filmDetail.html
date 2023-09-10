@@ -1,0 +1,36 @@
+{% extends 'partials/base.html' %} {% block content %}
+<h2>{{ film.title }}</h2>
+<p>Release Date: {{ film.formatted_release_date }}</p>
+<p>
+  Directors: {% for director in film.directors %} {% comment %} ===============
+  {% endcomment %} {{ director.first_name }} {% comment %}
+  ====================== {% endcomment %}{{ director.last_name }}{% comment %}
+  ====================== {% endcomment %}{% if not forloop.last %}, {% endif %}
+  {% endfor %}
+</p>
+<p>Description: {{ film.description }}</p>
+<p class="card-text">Reviews:</p>
+<ul>
+  {% for review in film.review_set.all %}
+  <li>
+    <strong>Rating:</strong> {{ review.rating }} stars<br />
+    <strong>Review:</strong> {{ review.review_text }}<br />
+    <strong>Date:</strong> {{ review.review_date|date:"F d, Y H:i A" }}
+    <strong>Author:</strong>{{ review.review_author.email }}
+  </li>
+  {% empty %}
+  <li>No reviews yet.</li>
+  {% endfor %}
+</ul>
+<!-- Add or remove from favorites button -->
+{% if user.is_authenticated %}
+<form method="post" action="{% url 'favoriteFilm' film.pk %}">
+  {% csrf_token %} {% if film in user.favorite_films.all %}
+  <button type="submit" class="btn btn-danger">Remove from Favorites</button>
+  {% else %}
+  <button type="submit" class="btn btn-success">Add to Favorites</button>
+  {% endif %}
+</form>
+{% else %}
+<p>Please log in to add this film to your favorites.</p>
+{% endif %} {% endblock %}
