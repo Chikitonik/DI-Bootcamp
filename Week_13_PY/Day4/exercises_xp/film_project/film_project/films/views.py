@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView
 from .models import Film, Director, Review
-from .forms import FilmForm, DirectorForm, ReviewForm
+from .forms import FilmForm, DirectorForm, ReviewForm, ProducerFormSet
 from django.core.exceptions import PermissionDenied
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
@@ -41,6 +41,27 @@ class FilmCreateView(CreateView):
         if not request.user.is_superuser:
             raise PermissionDenied
         return super().dispatch(request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['formset'] = ProducerFormSet()
+        return context
+
+    def post(self, request, *args, **kwargs):
+        form = self.get_form()
+        formset = ProducerFormSet(request.POST, prefix='producers')
+
+        if form.is_valid() and formset.is_valid():
+            self.object = form.save()
+            producers = formset.save(commit=False)
+
+            for producer in producers:
+                producer.save()
+                self.object.producers.add(producer)
+
+            return self.form_valid(form)
+
+        return self.form_invalid(form, formset)
 
 
 class DirectorCreateView(CreateView):

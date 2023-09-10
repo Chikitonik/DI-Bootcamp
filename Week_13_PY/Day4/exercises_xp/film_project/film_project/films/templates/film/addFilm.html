@@ -1,7 +1,7 @@
-{% extends 'partials/base.html' %} {% block content %}
-<h2>Create Film</h2>
 <form method="post">
-  {% csrf_token %} {{ form.as_p }}
-  <button type="submit">Create</button>
+  {% csrf_token %} {{ form.as_p }} {% comment %}
+  =========================================================== {% endcomment %}
+  {{ formset.management_form }} {% comment %}
+  ============================================================ {% endcomment %}
+  <input type="submit" value="Save" />
 </form>
-{% endblock %}

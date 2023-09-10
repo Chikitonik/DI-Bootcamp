@@ -1,5 +1,6 @@
 from django import forms
-from .models import Film, Director, Review
+from .models import Film, Director, Review, Producer
+from django.forms import formset_factory
 
 
 class FilmForm(forms.ModelForm):
@@ -28,3 +29,12 @@ class ReviewForm(forms.ModelForm):
         if user:
             self.fields["review_author"].initial = user
             self.fields["review_author"].widget = forms.HiddenInput()
+
+
+class ProducerForm(forms.ModelForm):
+    class Meta:
+        model = Producer
+        fields = ['first_name', 'last_name']
+
+
+ProducerFormSet = formset_factory(ProducerForm, extra=1)
