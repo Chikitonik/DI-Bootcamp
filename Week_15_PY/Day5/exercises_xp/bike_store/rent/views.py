@@ -1,8 +1,12 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Rental, Customer, Vehicle, RentalStation
+from .models import Rental, Customer, Vehicle, RentalStation, VehicleType
 from .serializers import RentalSerializer, CustomerSerializer, VehicleSerializer, RentalStationSerializer
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from django.db.models import Count
+from django.db.models.functions import TruncMonth
 
 
 class RentalList(APIView):
@@ -129,3 +133,42 @@ class VehicleDistribution(APIView):
 class DistributeVehicles(APIView):
     def post(self, request):
         return Response({"message": "Not implemented yet."}, status=status.HTTP_501_NOT_IMPLEMENTED)
+
+
+class MonthlyRentalStats(APIView):
+    def get(self, request):
+        monthly_stats = Rental.objects.annotate(
+            month=TruncMonth('rental_date')
+        ).values('month').annotate(count=Count('id')).order_by('month')
+
+        stats_dict = {}
+        for stat in monthly_stats:
+            stats_dict[stat['month'].strftime('%Y-%m')] = stat['count']
+
+        return Response(stats_dict)
+
+
+class PopularRentalStation(APIView):
+    def get(self, request):
+        popular_stations = RentalStation.objects.annotate(
+            rental_count=Count('address')
+        ).order_by('-rental_count')
+
+        stats_dict = {}
+        for station in popular_stations:
+            stats_dict[station.name] = station.rental_count
+
+        return Response(stats_dict)
+
+
+class PopularVehicleType(APIView):
+    def get(self, request):
+        vehicle_types = VehicleType.objects.annotate(
+            rental_count=Count('vehicle__rental')
+        ).values('name', 'rental_count')
+
+        stats_dict = {}
+        for vehicle_type in vehicle_types:
+            stats_dict[vehicle_type['name']] = vehicle_type['rental_count']
+
+        return Response(stats_dict)

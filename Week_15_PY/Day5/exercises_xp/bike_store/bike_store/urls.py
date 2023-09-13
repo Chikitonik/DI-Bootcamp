@@ -47,4 +47,14 @@ urlpatterns = [
     # Distribute Vehicles
     path('rent/station/distribute/', views.DistributeVehicles.as_view(),
          name='distribute-vehicles'),
+
+    # monthly rental statistics endpoint
+    path('rent/stats/monthly/', views.MonthlyRentalStats.as_view(),
+         name='monthly-rental-stats'),
+
+    #  popular
+    path('rent/stats/popular_station/',
+         views.PopularRentalStation.as_view(), name='popular-rental-station'),
+    path('rent/stats/popular_vehicle_type/',
+         views.PopularVehicleType.as_view(), name='popular_vehicle_type'),
 ]
