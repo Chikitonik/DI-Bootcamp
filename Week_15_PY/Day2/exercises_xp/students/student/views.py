@@ -4,12 +4,18 @@ from rest_framework.response import Response
 from .models import Student
 from .serializers import StudentSerializer
 from django.http import Http404
+from django.utils import timezone
 
 
 @api_view(['GET', 'POST'])
 def student_list(request):
-    if request.method == 'GET':
+    date_joined_param = request.query_params.get('date_joined', None)
+    if date_joined_param:
+        students = Student.objects.filter(date_joined__date=date_joined_param)
+    else:
         students = Student.objects.all()
+
+    if request.method == 'GET':
         serializer = StudentSerializer(students, many=True)
         return Response(serializer.data)
 
